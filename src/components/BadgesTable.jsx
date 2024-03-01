@@ -1,0 +1,396 @@
+"use client";
+import React, { useState } from "react";
+
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import {
+  CaretSortIcon,
+  ChevronDownIcon,
+  DotsHorizontalIcon,
+} from "@radix-ui/react-icons";
+import {
+  ColumnDef,
+  ColumnFiltersState,
+  SortingState,
+  VisibilityState,
+  flexRender,
+  getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
+
+import { Button } from "./ui/button";
+import { Checkbox } from "./ui/checkbox";
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { Input } from "./ui/input";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./ui/table";
+
+const data = [
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "module",
+    module_courses: "Public Health Sciences",
+  },
+];
+
+export const columns = [
+  {
+    accessorKey: "badgeTitle",
+    header: "Badge Title",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("badgeTitle")}</div>
+    ),
+  },
+  {
+    accessorKey: "icon",
+    header: "Icon",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("icon")}</div>,
+  },
+  {
+    accessorKey: "associatedWith",
+    header: "Associated With",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("associatedWith")}</div>
+    ),
+  },
+  {
+    accessorKey: "module_courses",
+    header: "Module/Courses",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("module_courses")}</div>
+    ),
+  },
+  {
+    id: "actions",
+    enableHiding: false,
+    cell: ({ row }) => {
+      const payment = row.original;
+      const [position, setPosition] = useState("");
+      return (
+        <>
+          <Popover>
+            <PopoverTrigger asChild>
+              <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
+            </PopoverTrigger>
+
+            <PopoverContent className="w-[400px] mr-[550px] -mt-[220px]">
+              <div className="grid gap-4 ">
+                <div className="space-y-2">
+                  <h4 className="font-medium leading-none">Update Badge</h4>
+                </div>
+                <div className="grid gap-2">
+                  <div className="flex flex-col items-right gap-1">
+                    <label htmlFor="maxHeight">Badge Title</label>
+                    <Input
+                      id="badgeTitle"
+                      defaultValue=""
+                      className="col-span-2 h-9"
+                    />
+                  </div>
+                  <div className="flex flex-col items-right gap-1">
+                    <label htmlFor="maxHeight">Badge URL</label>
+                    <Input
+                      id="Badgeurl"
+                      defaultValue=""
+                      className="col-span-2 h-9"
+                    />
+                  </div>
+                  <div className="flex flex-col items-right gap-1">
+                    <label htmlFor="maxHeight">Associate badge with</label>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="outline">{position}</Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-56">
+                        <DropdownMenuLabel>Badges Position</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuRadioGroup
+                          value={position}
+                          onValueChange={setPosition}
+                        >
+                          <DropdownMenuRadioItem value="module">
+                            Module
+                          </DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="courses">
+                            Courses
+                          </DropdownMenuRadioItem>
+                        </DropdownMenuRadioGroup>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
+                  <Button className="mt-2">Submit</Button>
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </>
+      );
+    },
+  },
+];
+
+export function BadgesTable() {
+  const [sorting, setSorting] = useState([]);
+  const [columnFilters, setColumnFilters] = useState([]);
+  const [columnVisibility, setColumnVisibility] = useState({});
+  const [rowSelection, setRowSelection] = useState({});
+
+  const table = useReactTable({
+    data,
+    columns,
+    onSortingChange: setSorting,
+    onColumnFiltersChange: setColumnFilters,
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    onColumnVisibilityChange: setColumnVisibility,
+    onRowSelectionChange: setRowSelection,
+    state: {
+      sorting,
+      columnFilters,
+      columnVisibility,
+      rowSelection,
+    },
+  });
+
+  return (
+    <div className="w-full pl-5">
+      <div className="flex items-center py-4">
+        {/* <Input
+          placeholder="Search Student"
+          value={(table.getColumn("email")?.getFilterValue()) ?? ""}
+          onChange={(event) =>
+            table.getColumn("email")?.setFilterValue(event.target.value)
+          }
+          className="max-w-sm w-[240px]"
+        /> */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" className="ml-auto">
+              Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {table
+              .getAllColumns()
+              .filter((column) => column.getCanHide())
+              .map((column) => {
+                return (
+                  <DropdownMenuCheckboxItem
+                    key={column.id}
+                    className="capitalize"
+                    checked={column.getIsVisible()}
+                    onCheckedChange={(value) =>
+                      column.toggleVisibility(!!value)
+                    }
+                  >
+                    {column.id}
+                  </DropdownMenuCheckboxItem>
+                );
+              })}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+      <div className="rounded-md border">
+        <Table>
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map((header) => {
+                  return (
+                    <TableHead key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </TableHead>
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows?.length ? (
+              table.getRowModel().rows.map((row) => (
+                <TableRow
+                  key={row.id}
+                  data-state={row.getIsSelected() && "selected"}
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell key={cell.id}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell
+                  colSpan={columns.length}
+                  className="h-24 text-center"
+                >
+                  No results.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+      <div className="flex items-center justify-end space-x-2 py-4">
+        <div className="flex-1 text-sm text-muted-foreground">
+          {table.getFilteredSelectedRowModel().rows.length} of{" "}
+          {table.getFilteredRowModel().rows.length} row(s) selected.
+        </div>
+        <div className="space-x-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            Previous
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            Next
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
