@@ -266,8 +266,6 @@ export const columns = [
     enableHiding: false,
     cell: ({ row }) => {
       const payment = row.original;
-      const [position, setPosition] = useState("");
-      const [course, setCourse] = useState("");
       return (
         <>
           <Dialog>

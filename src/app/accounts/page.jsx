@@ -1,7 +1,7 @@
 import { DataTableDemo } from '../../components/shadTabble'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div className="">
       <div className="flex items-center justify-between space-y-2 w-[1330px] md:py-7 pl-6">
@@ -21,4 +21,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

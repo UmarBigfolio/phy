@@ -121,8 +121,8 @@ const data = [
     },
   ];
 
-const page = () => {
-    const [sorting, setSorting] = useState([]);
+const Page = () => {
+  const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
   const [columnVisibility, setColumnVisibility] = useState({});
   const [rowSelection, setRowSelection] = useState({});
@@ -246,4 +246,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

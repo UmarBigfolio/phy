@@ -51,7 +51,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select"
+} from "./ui/select";
 import { Input } from "./ui/input";
 import {
   Table,
@@ -68,13 +68,13 @@ const data = [
     id: "m5gr84i9",
     title: "Anki Page",
     image: "-",
-    handle:'anki_page',
+    handle: "anki_page",
   },
   {
     id: "m5gr84i9",
     title: "Anking",
     image: "-",
-    handle:'anking',
+    handle: "anking",
   },
 ];
 
@@ -82,7 +82,9 @@ export const columns = [
   {
     accessorKey: "image",
     header: "Image",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("image")}</div>,
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("image")}</div>
+    ),
   },
   {
     accessorKey: "title",
@@ -95,18 +97,14 @@ export const columns = [
   {
     accessorKey: "content",
     header: "",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("")}</div>
-    ),
+    cell: ({ row }) => <div className="capitalize">{row.getValue("")}</div>,
   },
   {
     accessorKey: "handle",
     header: "Handle",
-    cell: ({ row }) => (
-      <div className="">{row.getValue("handle")}</div>
-    ),
+    cell: ({ row }) => <div className="">{row.getValue("handle")}</div>,
   },
- 
+
   {
     id: "actions",
     enableHiding: false,
@@ -114,11 +112,10 @@ export const columns = [
       const payment = row.original;
       return (
         <div className="flex items-center gap-5 justify-center">
-
-<Dialog>
+          <Dialog>
             <DialogTrigger asChild>
-            {/* <DotsHorizontalIcon  /> */}
-            <ClipboardPen className="w-[20px] cursor-pointer"/>
+              {/* <DotsHorizontalIcon  /> */}
+              <ClipboardPen className="w-[20px] cursor-pointer" />
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
@@ -129,25 +126,25 @@ export const columns = [
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 ">
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge Title</Label>
-                    <Input
-                      id="title"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge URL</Label>
-                    <Input
-                      id="Badgeurl"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Associate badge with</Label>
-                    <Select>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Badge Title</Label>
+                  <Input
+                    id="title"
+                    defaultValue=""
+                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                  />
+                </div>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Badge URL</Label>
+                  <Input
+                    id="Badgeurl"
+                    defaultValue=""
+                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                  />
+                </div>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Associate badge with</Label>
+                  <Select>
                     <SelectTrigger className="outline-none">
                       <SelectValue placeholder="Badges Position" />
                     </SelectTrigger>
@@ -156,14 +153,14 @@ export const columns = [
                       <SelectItem value="courses">Courses</SelectItem>
                     </SelectContent>
                   </Select>
-                  </div>
                 </div>
+              </div>
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Trash2  className="cursor-pointer w-[20px]"/>
+          <Trash2 className="cursor-pointer w-[20px]" />
         </div>
       );
     },

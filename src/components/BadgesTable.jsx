@@ -51,7 +51,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select"
+} from "./ui/select";
 import { Input } from "./ui/input";
 import {
   Table,
@@ -210,13 +210,11 @@ export const columns = [
     enableHiding: false,
     cell: ({ row }) => {
       const payment = row.original;
-      const [position, setPosition] = useState("");
       return (
         <>
-
-<Dialog>
+          <Dialog>
             <DialogTrigger asChild>
-            <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
+              <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
@@ -227,25 +225,25 @@ export const columns = [
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 ">
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge Title</Label>
-                    <Input
-                      id="badgeTitle"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge URL</Label>
-                    <Input
-                      id="Badgeurl"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Associate badge with</Label>
-                    <Select>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Badge Title</Label>
+                  <Input
+                    id="badgeTitle"
+                    defaultValue=""
+                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                  />
+                </div>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Badge URL</Label>
+                  <Input
+                    id="Badgeurl"
+                    defaultValue=""
+                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                  />
+                </div>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Associate badge with</Label>
+                  <Select>
                     <SelectTrigger className="outline-none">
                       <SelectValue placeholder="Badges Position" />
                     </SelectTrigger>
@@ -254,8 +252,8 @@ export const columns = [
                       <SelectItem value="courses">Courses</SelectItem>
                     </SelectContent>
                   </Select>
-                  </div>
                 </div>
+              </div>
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
