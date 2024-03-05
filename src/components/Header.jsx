@@ -17,13 +17,12 @@ const Header = () => {
         <div className="flex h-14 items-center justify-between">
           <div className="">
             <a className="flex items-center space-x-2" href="/">
-              <span className="text-[40px] font-medium leading-6">
-              PHYSEO
-                {/* <img
+              <span>
+                 <img
                   className="filter invert-[100%] w-[120px] md:w-[200px] "
                   src="https://www.physeo.com/images/logo.png"
                   alt="kllkll"
-                /> */}
+                /> 
               </span>
             </a>
           </div>
