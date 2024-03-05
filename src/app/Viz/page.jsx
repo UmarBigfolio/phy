@@ -3,24 +3,24 @@ import React from "react";
 const page = () => {
     return (
         <div>
-            <div class="rounded-xl border bg-card text-card-foreground shadow col-span-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                    <h3 class="font-semibold leading-none tracking-tight">Overview</h3>
+            <div className="rounded-xl border bg-card text-card-foreground shadow col-span-4">
+                <div className="flex flex-col space-y-1.5 p-6">
+                    <h3 className="font-semibold leading-none tracking-tight">Overview</h3>
                 </div>
-                <div class="p-6 pt-0 pl-2">
+                <div className="p-6 pt-0 pl-2">
                     <div
-                        class="recharts-responsive-container"
+                        className="recharts-responsive-container"
                         width="504.28125"
                         height="350"
                         style="width: 100%; height: 350px; min-width: 0px;"
                     >
                         <div
-                            class="recharts-wrapper"
+                            className="recharts-wrapper"
                             role="region"
                             style="position: relative; cursor: default; width: 504px; height: 350px;"
                         >
                             <svg
-                                class="recharts-surface"
+                                className="recharts-surface"
                                 width="504"
                                 height="350"
                                 viewBox="0 0 504 350"
@@ -32,9 +32,9 @@ const page = () => {
                                         <rect x="65" y="5" height="310" width="434"></rect>
                                     </clipPath>
                                 </defs>
-                                <g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
-                                    <g class="recharts-cartesian-axis-ticks">
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                <g className="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
+                                    <g className="recharts-cartesian-axis-ticks">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -44,7 +44,7 @@ const page = () => {
                                                 x="83.08333333333333"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="83.08333333333333" dy="0.71em">
@@ -52,7 +52,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -62,7 +62,7 @@ const page = () => {
                                                 x="119.24999999999999"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="119.24999999999999" dy="0.71em">
@@ -70,7 +70,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -80,7 +80,7 @@ const page = () => {
                                                 x="155.41666666666666"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="155.41666666666666" dy="0.71em">
@@ -88,7 +88,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -98,7 +98,7 @@ const page = () => {
                                                 x="191.58333333333334"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="191.58333333333334" dy="0.71em">
@@ -106,7 +106,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -116,7 +116,7 @@ const page = () => {
                                                 x="227.75"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="227.75" dy="0.71em">
@@ -124,7 +124,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -134,7 +134,7 @@ const page = () => {
                                                 x="263.91666666666663"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="263.91666666666663" dy="0.71em">
@@ -142,7 +142,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -152,7 +152,7 @@ const page = () => {
                                                 x="300.0833333333333"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="300.0833333333333" dy="0.71em">
@@ -160,7 +160,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -170,7 +170,7 @@ const page = () => {
                                                 x="336.24999999999994"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="336.24999999999994" dy="0.71em">
@@ -178,7 +178,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -188,7 +188,7 @@ const page = () => {
                                                 x="372.41666666666663"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="372.41666666666663" dy="0.71em">
@@ -196,7 +196,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -206,7 +206,7 @@ const page = () => {
                                                 x="408.5833333333333"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="408.5833333333333" dy="0.71em">
@@ -214,7 +214,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -224,7 +224,7 @@ const page = () => {
                                                 x="444.74999999999994"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="444.74999999999994" dy="0.71em">
@@ -232,7 +232,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -242,7 +242,7 @@ const page = () => {
                                                 x="480.91666666666663"
                                                 y="323"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="middle"
                                             >
                                                 <tspan x="480.91666666666663" dy="0.71em">
@@ -252,9 +252,9 @@ const page = () => {
                                         </g>
                                     </g>
                                 </g>
-                                <g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis">
-                                    <g class="recharts-cartesian-axis-ticks">
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                <g className="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis">
+                                    <g className="recharts-cartesian-axis-ticks">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -264,7 +264,7 @@ const page = () => {
                                                 x="57"
                                                 y="315"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="end"
                                             >
                                                 <tspan x="57" dy="0.355em">
@@ -272,7 +272,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -282,7 +282,7 @@ const page = () => {
                                                 x="57"
                                                 y="237.5"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="end"
                                             >
                                                 <tspan x="57" dy="0.355em">
@@ -290,7 +290,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -300,7 +300,7 @@ const page = () => {
                                                 x="57"
                                                 y="160"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="end"
                                             >
                                                 <tspan x="57" dy="0.355em">
@@ -308,7 +308,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -318,7 +318,7 @@ const page = () => {
                                                 x="57"
                                                 y="82.5"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="end"
                                             >
                                                 <tspan x="57" dy="0.355em">
@@ -326,7 +326,7 @@ const page = () => {
                                                 </tspan>
                                             </text>
                                         </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
+                                        <g className="recharts-layer recharts-cartesian-axis-tick">
                                             <text
                                                 stroke="none"
                                                 font-size="12"
@@ -336,7 +336,7 @@ const page = () => {
                                                 x="57"
                                                 y="9"
                                                 fill="#888888"
-                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                className="recharts-text recharts-cartesian-axis-tick-value"
                                                 text-anchor="end"
                                             >
                                                 <tspan x="57" dy="0.355em">
@@ -346,17 +346,17 @@ const page = () => {
                                         </g>
                                     </g>
                                 </g>
-                                <g class="recharts-layer recharts-bar fill-primary">
-                                    <g class="recharts-layer recharts-bar-rectangles">
-                                        <g class="recharts-layer">
+                                <g className="recharts-layer recharts-bar fill-primary">
+                                    <g className="recharts-layer recharts-bar-rectangles">
+                                        <g className="recharts-layer">
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="99.71666666666667"
                                                     name="Jan"
@@ -367,13 +367,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="175.97666666666666"
                                                     name="Feb"
@@ -384,13 +384,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="287.215"
                                                     name="Mar"
@@ -401,13 +401,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="276.93333333333334"
                                                     name="Apr"
@@ -418,13 +418,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="304.2133333333333"
                                                     name="May"
@@ -435,13 +435,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="189.565"
                                                     name="Jun"
@@ -452,13 +452,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="168.43333333333334"
                                                     name="Jul"
@@ -469,13 +469,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="90.77833333333331"
                                                     name="Aug"
@@ -486,13 +486,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="300.9583333333333"
                                                     name="Sep"
@@ -503,13 +503,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="149.9366666666667"
                                                     name="Oct"
@@ -520,13 +520,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="150.19499999999996"
                                                     name="Nov"
@@ -537,13 +537,13 @@ const page = () => {
                                                 ></path>
                                             </g>
                                             <g
-                                                class="recharts-layer recharts-bar-rectangle"
+                                                className="recharts-layer recharts-bar-rectangle"
                                                 role="img"
                                             >
                                                 <path
                                                     fill="currentColor"
                                                     radius="4,4,0,0"
-                                                    class="recharts-rectangle fill-primary"
+                                                    className="recharts-rectangle fill-primary"
                                                     width="28"
                                                     height="299.305"
                                                     name="Dec"
@@ -555,7 +555,7 @@ const page = () => {
                                             </g>
                                         </g>
                                     </g>
-                                    <g class="recharts-layer"></g>
+                                    <g className="recharts-layer"></g>
                                 </g>
                             </svg>
                         </div>

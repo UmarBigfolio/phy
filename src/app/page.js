@@ -63,30 +63,30 @@ export default function Home() {
 
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mx-auto px-5 md:px-0">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mx-auto px-5 md:px-0">
           {data.map((item) => {
             return (
               <>
-                <div class="rounded-xl border bg-card text-card-foreground shadow">
-                  <div class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
-                    <h3 class="tracking-tight text-sm font-medium">
+                <div className="rounded-xl border bg-card text-card-foreground shadow">
+                  <div className="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                    <h3 className="tracking-tight text-sm font-medium">
                       {item.title}
                     </h3>
                     <span
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      class="h-4 w-4 text-muted-foreground"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      className="h-4 w-4 text-muted-foreground"
                     >
                       {item.icon}
                     </span>
                   </div>
-                  <div class="p-6 pt-0">
-                    <div class="text-2xl font-bold">{item.numbers}</div>
-                    <p class="text-xs text-muted-foreground">{item.subTitle}</p>
+                  <div className="p-6 pt-0">
+                    <div className="text-2xl font-bold">{item.numbers}</div>
+                    <p className="text-xs text-muted-foreground">{item.subTitle}</p>
                   </div>
                 </div>
               </>

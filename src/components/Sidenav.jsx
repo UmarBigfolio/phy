@@ -109,8 +109,8 @@ const SideNav = () => {
       ),
     },
     {
-      text: "Drafts",
-      href:"/studentCard",
+      text: "Blogs",
+      href:"/blogs",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
