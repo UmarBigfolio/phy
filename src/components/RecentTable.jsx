@@ -6,7 +6,7 @@ const RecentTable = () => {
       <div class="rounded-xl border bg-card text-card-foreground shadow col-span-3 pt-[5px]">
         <div class="flex flex-col space-y-1.5 p-6">
           <h3 class="font-semibold leading-none tracking-tight">
-            Recent Students
+            Most Watched Videos
           </h3>
           <p class="text-sm text-muted-foreground">
             You made 265 sales this month.

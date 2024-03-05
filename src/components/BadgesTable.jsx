@@ -19,6 +19,16 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import { Label } from "./ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
 
 import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
@@ -33,6 +43,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select"
 import { Input } from "./ui/input";
 import {
   Table,
@@ -160,17 +179,18 @@ const data = [
 
 export const columns = [
   {
+    accessorKey: "icon",
+    header: "Icon",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("icon")}</div>,
+  },
+  {
     accessorKey: "badgeTitle",
     header: "Badge Title",
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("badgeTitle")}</div>
     ),
   },
-  {
-    accessorKey: "icon",
-    header: "Icon",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("icon")}</div>,
-  },
+
   {
     accessorKey: "associatedWith",
     header: "Associated With",
@@ -193,61 +213,54 @@ export const columns = [
       const [position, setPosition] = useState("");
       return (
         <>
-          <Popover>
-            <PopoverTrigger asChild>
-              <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
-            </PopoverTrigger>
 
-            <PopoverContent className="w-[400px] mr-[550px] -mt-[220px]">
+<Dialog>
+            <DialogTrigger asChild>
+            <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Update Badge</DialogTitle>
+                <DialogDescription>
+                  Make changes to your profile here. Click save when you're
+                  done.
+                </DialogDescription>
+              </DialogHeader>
               <div className="grid gap-4 ">
-                <div className="space-y-2">
-                  <h4 className="font-medium leading-none">Update Badge</h4>
-                </div>
-                <div className="grid gap-2">
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Badge Title</label>
+                    <Label htmlFor="maxHeight">Badge Title</Label>
                     <Input
                       id="badgeTitle"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Badge URL</label>
+                    <Label htmlFor="maxHeight">Badge URL</Label>
                     <Input
                       id="Badgeurl"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Associate badge with</label>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button variant="outline">{position}</Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="w-56">
-                        <DropdownMenuLabel>Badges Position</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuRadioGroup
-                          value={position}
-                          onValueChange={setPosition}
-                        >
-                          <DropdownMenuRadioItem value="module">
-                            Module
-                          </DropdownMenuRadioItem>
-                          <DropdownMenuRadioItem value="courses">
-                            Courses
-                          </DropdownMenuRadioItem>
-                        </DropdownMenuRadioGroup>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+                    <Label htmlFor="maxHeight">Associate badge with</Label>
+                    <Select>
+                    <SelectTrigger className="outline-none">
+                      <SelectValue placeholder="Badges Position" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="module">Module</SelectItem>
+                      <SelectItem value="courses">Courses</SelectItem>
+                    </SelectContent>
+                  </Select>
                   </div>
-                  <Button className="mt-2">Submit</Button>
                 </div>
-              </div>
-            </PopoverContent>
-          </Popover>
+              <DialogFooter>
+                <Button type="submit">Submit</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
         </>
       );
     },

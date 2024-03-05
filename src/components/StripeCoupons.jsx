@@ -48,59 +48,126 @@ import {
 
 const data = [
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
   },
   {
-    id: "RS3zk6hD",
-   duration:"once",
+    coupons_code: "RS3zk6hD",
+   types:"once",
    name:"Test Coupon Code",
+   plan:"1 year",
+   assigned_user:"-",
+   applied_user:"-",
+   start_date:"-",
+   end_date:"-",
+   expire:"-"
+   
   },
 
 ];
@@ -111,29 +178,49 @@ const data = [
 export const columns = [
  
   {
-    accessorKey: "id",
-    header: "Id",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
+    accessorKey: "coupons_code",
+    header: "Coupon Code",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("coupons_code")}</div>,
   },
   {
-    accessorKey: "duration",
-    header: "Duration",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("duration")}</div>,
+    accessorKey: "types",
+    header: "Types",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("types")}</div>,
   },
   {
-    accessorKey: "space",
-    header: "",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("")}</div>,
+    accessorKey: "plan",
+    header: "Plan",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("plan")}</div>,
   },
   {
-    accessorKey: "space",
-    header: "",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("")}</div>,
+    accessorKey: "assigned_user",
+    header: "Assigned Users",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("assigned_user")}</div>,
+  },
+  {
+    accessorKey: "applied_user",
+    header: "Applied Users",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("applied_user")}</div>,
   },
   {
     accessorKey: "name",
-    header: "Name",
+    header: "Coupons Name",
     cell: ({ row }) => <div className="capitalize">{row.getValue("name")}</div>,
+  },
+  {
+    accessorKey: "start_date",
+    header: "Start Date",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("start_date")}</div>,
+  },
+  {
+    accessorKey: "end_date",
+    header: "End Date",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("end_date")}</div>,
+  },
+  {
+    accessorKey: "expire",
+    header: "Expire",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("expire")}</div>,
   },
 ];
 

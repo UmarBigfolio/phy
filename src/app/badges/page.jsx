@@ -1,94 +1,103 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { BadgesTable } from "../../components/BadgesTable";
 import { Input } from "../../components/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../../components/ui/popover"
+import { CardDescription } from "../../components/ui/card"
 import { Button } from "../../components/ui/button";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuLabel,
-    DropdownMenuRadioGroup,
-    DropdownMenuRadioItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "../../components/ui/dropdown-menu"
-
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../../components/ui/dropdown-menu";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "../../components/ui/select"
+import { Label } from "../../components/ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../components/ui/dialog";
 
 const Badges = () => {
-    const [position, setPosition] = useState("");
+  const [position, setPosition] = useState("");
   return (
-    <div className="">
-      <div class="flex items-center justify-between space-y-2 w-[1330px] md:py-7 pl-6">
-        <h2 class="text-3xl font-bold tracking-tight">Badges</h2>
+    <div className="pr-2">
+      <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
+      <span>
+        <h2 className="text-[1.875rem] font-bold">Badges</h2>
+        <CardDescription>Deploy your new project in one-click.</CardDescription>
+      </span>
         <div class="flex items-center space-x-2">
           <div class="grid gap-2">
             {/* <Input placeholder="Search Student" /> */}
-
           </div>
-
-
-
-          <Popover>
-            <PopoverTrigger asChild>
+          <Dialog>
+            <DialogTrigger asChild>
               <Button variant="">Create Badge</Button>
-            </PopoverTrigger>
-          
-            <PopoverContent className="w-[400px] mr-[550px] -mt-12">
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Create Badge</DialogTitle>
+                <DialogDescription>
+                  Make changes to your profile here. Click save when you're
+                  done.
+                </DialogDescription>
+              </DialogHeader>
               <div className="grid gap-4 ">
-                <div className="space-y-2">
-                  <h4 className="font-medium leading-none">Create Badge</h4>
-                </div>
-                <div className="grid gap-2">
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Badge Title</label>
+                    <Label htmlFor="maxHeight">Badge Title</Label>
                     <Input
                       id="badgeTitle"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
-                  </div>  
+                  </div>
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Badge URL</label>
+                    <Label htmlFor="maxHeight">Badge URL</Label>
                     <Input
                       id="Badgeurl"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
-                  </div> 
-<div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Associate badge with</label>
-                  <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">{position}</Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Badges Position</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="module">Module</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="courses">Courses</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-      </DropdownMenuContent>
-    </DropdownMenu>
-    </div>
-                  <Button className="mt-2">Submit</Button>
+                  </div>
                   
+                  <div className="flex flex-col items-right gap-1">
+                    <Label htmlFor="maxHeight">Associate badge with</Label>
+                    <Select>
+                    <SelectTrigger className="outline-none">
+                      <SelectValue placeholder="Badges Position" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="module">Module</SelectItem>
+                      <SelectItem value="courses">Courses</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  </div>
                 </div>
-              </div>
-            </PopoverContent>
-          </Popover>
-
-
+              <DialogFooter>
+                <Button type="submit">Submit</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
       <BadgesTable />
     </div>
-
   );
 };
 

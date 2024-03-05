@@ -12,6 +12,16 @@ import {
   ChevronDownIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
+import { Label } from "./ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -235,48 +245,49 @@ export const columns = [
             <DropdownMenuItem>View payment details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu> */}
-                <Popover>
-            <PopoverTrigger asChild>
-              <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
-            </PopoverTrigger>
-          
-            <PopoverContent className="w-[400px] mr-[550px] -mt-[220px]">
+        <Dialog>
+            <DialogTrigger asChild>
+            <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Edit College</DialogTitle>
+                <DialogDescription>
+                  Make changes to your profile here. Click save when you're
+                  done.
+                </DialogDescription>
+              </DialogHeader>
               <div className="grid gap-4 ">
-                <div className="space-y-2">
-                  <h4 className="font-medium leading-none">Edit College</h4>
-                </div>
-                <div className="grid gap-2">
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">College Name *</label>
+                    <Label htmlFor="maxHeight">College Name *</Label>
                     <Input
                       id="collegeName"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>  
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Email Suffix *</label>
+                    <Label htmlFor="maxHeight">Email Suffix *</Label>
                     <Input
                       id="emailSuffix"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div> 
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Calendars</label>
+                    <Label htmlFor="maxHeight">Calendars</Label>
                     <Input
                       id="password"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
-                  </div> 
-                 
-                  <Button className="mt-2">Update</Button>
-                  
+                  </div>                   
                 </div>
-              </div>
-            </PopoverContent>
-          </Popover>
+              <DialogFooter>
+                <Button type="submit">Submit</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
           </>
          
       );

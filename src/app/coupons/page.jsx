@@ -6,10 +6,8 @@ import DatePicker from "../../components/DatePicker";
 import { RadioGroup, RadioGroupItem } from "../../components/ui/radio-group";
 
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../../components/ui/popover";
+ CardDescription
+} from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 import {
   Tabs,
@@ -17,83 +15,102 @@ import {
   TabsList,
   TabsTrigger,
 } from "../../components/ui/tabs";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../components/ui/dialog";
+import { Label } from "../../components/ui/label";
 
 const Coupons = () => {
   return (
-    <div className="">
-      <div class="flex items-center justify-between space-y-2 w-[1330px] md:py-7 pl-6">
-        <h2 class="text-3xl font-bold tracking-tight">Coupons Codes</h2>
-        <div class="flex items-center space-x-2">
+    <div className="pr-2">
+      <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
+      <span>
+        <h2 className="text-[1.875rem] font-bold">Coupons Code</h2>
+        <CardDescription>Deploy your new project in one-click.</CardDescription>
+      </span>
+              <div class="flex items-center space-x-2">
           <div class="grid gap-2">
             {/* <Input placeholder="Search Student" /> */}
           </div>
-
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="">Create Coupons</Button>
-            </PopoverTrigger>
-
-            <PopoverContent className="w-[400px] mr-[550px] -mt-12">
+          <Dialog>
+            <DialogTrigger asChild>
+            <Button variant="">Create Coupons</Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Create User</DialogTitle>
+                <DialogDescription>
+                  Make changes to your profile here. Click save when you're
+                  done.
+                </DialogDescription>
+              </DialogHeader>
               <div className="grid gap-4 ">
-                <div className="space-y-2">
-                  <h4 className="font-medium leading-none">Create Coupons</h4>
-                </div>
-                <div className="grid gap-2">
+                <div className="grid gap-4">
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">All Email</label>
+                    <Label htmlFor="maxHeight">All Email</Label>
                     <Input
                       id="email"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">All Discounts</label>
+                    <Label htmlFor="maxHeight">All Discounts</Label>
                     <Input
                       id="firstName"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Start Date</label>
+                    <Label htmlFor="maxHeight">Start Date</Label>
                     <DatePicker />
                   </div>
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Expiry Date</label>
+                    <Label htmlFor="maxHeight">Expiry Date</Label>
                     <DatePicker />
                   </div>
                   <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight"></label>
+                    <Label htmlFor="maxHeight"></Label>
                     <RadioGroup
                       defaultValue="option-one"
                       className="flex gap-5"
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="option-one" id="option-one" />
-                        <label htmlFor="option-one">For Single Plan</label>
+                        <Label htmlFor="option-one">For Single Plan</Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="option-two" id="option-two" />
-                        <label htmlFor="option-two">For All Plans</label>
+                        <Label htmlFor="option-two">For All Plans</Label>
                       </div>
                     </RadioGroup>
                   </div>
 
-                  <div className="flex flex-col items-right gap-1">
-                    <label htmlFor="maxHeight">Coupon Code</label>
+                  <div className="flex flex-col items-right gap-1 ">
+                    <Label htmlFor="maxHeight">Coupon Code</Label>
                     <Input
                       id="firstName"
                       defaultValue=""
-                      className="col-span-2 h-9"
+                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
 
-                  <Button className="mt-2">Submit</Button>
                 </div>
               </div>
-            </PopoverContent>
-          </Popover>
+              <DialogFooter>
+                <Button type="submit">Submit</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+
+          
         </div>
       </div>
       <Tabs defaultValue="paypal">

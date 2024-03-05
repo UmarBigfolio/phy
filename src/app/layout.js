@@ -18,8 +18,8 @@ export default function RootLayout({ children }) {
       <Header/>
       <div className="flex">
       <SideNav />
-      <div>
-      <div className="h-14" />
+      <div className="w-[100%]">
+      <div className="h-14"></div>
       {children}
       </div>
       </div>

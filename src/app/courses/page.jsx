@@ -17,7 +17,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-
+ import {CardDescription} from "../../components/ui/card"
 import { Button } from "../../components/ui/button";
 import {
   DropdownMenu,
@@ -146,10 +146,13 @@ const page = () => {
     },
   });
   return (
-    <div className="">
-      <div class="flex items-center justify-between space-y-2 w-[1330px] md:py-7 pl-6">
-        <h2 class="text-3xl font-bold tracking-tight">Courses</h2>
-        <div class="flex items-center space-x-2">
+    <div className="pr-2">
+      <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
+      <span>
+        <h2 className="text-[1.875rem] font-bold">Courses</h2>
+        <CardDescription>Deploy your new project in one-click.</CardDescription>
+      </span>
+              <div class="flex items-center space-x-2">
           <div class="grid gap-2">
           {/* <Input placeholder="Search Student"/> */}
            
@@ -238,7 +241,7 @@ const page = () => {
           </Button>
         </div>
       </div>
-    </div> */}
+    </div>  */}
     </div>
   )
 }
