@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ScrollArea } from "../components/ui/scroll-area"
 import Link from 'next/link'
-import { Award, BookmarkCheck, Landmark, NotebookText, User } from "lucide-react";
+import { Award, BookOpen, BookmarkCheck, CircleFadingPlus, FileSliders, Landmark, Layers, NotebookText, StarHalf, TabletSmartphone, User } from "lucide-react";
 const SideNav = () => {
   const [activeLink, setActiveLink] = useState(null);
 
@@ -111,48 +111,37 @@ const SideNav = () => {
     {
       text: "Blogs",
       href:"/blogs",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4"
-        >
-          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-        </svg>
+      icon: (<FileSliders xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 h-4 w-4"/>
+      
       ),
     },
     {
-      text: "Drafts",
-      href:"/studentCard",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4"
-        >
-          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-        </svg>
+      text: "Our Story",
+      href:"/story",
+      icon: (<CircleFadingPlus   xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 h-4 w-4"/>
       ),
     },
     {
-      text: "Drafts",
-      href:"/studentCard",
+      text: "How to use",
+      href:"/how-to-use",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -172,8 +161,53 @@ const SideNav = () => {
       ),
     },
      {
-      text: "Drafts",
-      href:"/studentCard",
+      text: "Review",
+      href:"/review",
+      icon: (<StarHalf  xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 h-4 w-4"/>
+      ),
+    },
+     {
+      text: "Book",
+      href:"/book",
+      icon: (<BookOpen xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 h-4 w-4"/>
+      ),
+    },
+     {
+      text: "Testimonials",
+      href:"/testimonials",
+      icon: (<TabletSmartphone  xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 h-4 w-4"/>
+      ),
+    },
+     {
+      text: "Page Header",
+      href:"/page_header",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -193,94 +227,20 @@ const SideNav = () => {
       ),
     },
      {
-      text: "Drafts",
-      href:"/studentCard",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4"
-        >
-          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-        </svg>
+      text: "Custom Pages",
+      href:"/custom_pages",
+      icon: (<Layers xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 h-4 w-4"/>
       ),
     },
-     {
-      text: "Drafts",
-      href:"/studentCard",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4"
-        >
-          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-        </svg>
-      ),
-    },
-     {
-      text: "Drafts",
-      href:"/studentCard",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4"
-        >
-          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-        </svg>
-      ),
-    },
-     {
-      text: "Drafts",
-      href:"/studentCard",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4"
-        >
-          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-        </svg>
-      ),
-    },
-     
-   
-
-    
-    // Add more links as needed
   ];
   
 

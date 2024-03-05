@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+
 import {
   CaretSortIcon,
   ChevronDownIcon,
@@ -62,99 +63,35 @@ import {
   TableRow,
 } from "./ui/table";
 import { ClipboardPen, Trash2 } from "lucide-react";
+import Link from "next/link";
 
 const data = [
   {
     id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
+    title: "what other student",
+    type:"rating",
+    image: "-",
+    visible:"show",
+    total_reviews:10,
+    link:'/student_review',
   },
   {
     id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
+    title: "what past employee",
+    type:"content",
+    image: "-",
+    visible:'show',
+    total_reviews:2,
+    link:'/past_employee_review',
   },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
+  
 ];
 
 export const columns = [
   {
-    accessorKey: "icon",
-    header: "Icon",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("icon")}</div>,
+    accessorKey: "image",
+    header: "Image",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("image")}</div>,
   },
   {
     accessorKey: "title",
@@ -165,19 +102,27 @@ export const columns = [
   },
 
   {
-    accessorKey: "space",
-    header: "",
+    accessorKey: "type",
+    header: "Type",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("space")}</div>
+      <div className="capitalize">{row.getValue("type")}</div>
     ),
   },
   {
-    accessorKey: "catogory",
-    header: "Catogory",
+    accessorKey: "visible",
+    header: "Visible",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("catogory")}</div>
+      <div className="capitalize">{row.getValue("visible")}</div>
     ),
   },
+  {
+    accessorKey: "total_reviews",
+    header: "Total Reviews",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("total_reviews")}</div>
+    ),
+  },
+ 
   {
     id: "actions",
     enableHiding: false,
@@ -185,55 +130,8 @@ export const columns = [
       const payment = row.original;
       return (
         <div className="flex items-center gap-5 justify-center">
-
-<Dialog>
-            <DialogTrigger asChild>
-            {/* <DotsHorizontalIcon  /> */}
-            <ClipboardPen className="w-[20px] cursor-pointer"/>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Update Badge</DialogTitle>
-                <DialogDescription>
-                  Make changes to your profile here. Click save when you're
-                  done.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 ">
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge Title</Label>
-                    <Input
-                      id="title"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge URL</Label>
-                    <Input
-                      id="Badgeurl"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Associate badge with</Label>
-                    <Select>
-                    <SelectTrigger className="outline-none">
-                      <SelectValue placeholder="Badges Position" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="module">Module</SelectItem>
-                      <SelectItem value="courses">Courses</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  </div>
-                </div>
-              <DialogFooter>
-                <Button type="submit">Submit</Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
+           <Link href={payment.link}>
+            <ClipboardPen className="w-[20px] cursor-pointer" /></Link>
           <Trash2  className="cursor-pointer w-[20px]"/>
         </div>
       );
@@ -241,7 +139,7 @@ export const columns = [
   },
 ];
 
-export function BlogsTable() {
+export function TestimonialsTable() {
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
   const [columnVisibility, setColumnVisibility] = useState({});

@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { BlogsTable } from "../../components/BlogsTable";
 import { Input } from "../../components/ui/input";
 import { CardDescription } from "../../components/ui/card"
 import { Button } from "../../components/ui/button";
+import {HowToUseTable} from "../../components/HowToUseTable"
 
 import {
   Select,
@@ -25,12 +25,12 @@ import {
   DialogTrigger,
 } from "../../components/ui/dialog";
 
-const Blogs = () => {
+const HowToUse = () => {
   return (
     <div className="pr-2">
       <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
       <span>
-        <h2 className="text-[1.875rem] font-bold">Blogs</h2>
+        <h2 className="text-[1.875rem] font-bold">How to Use</h2>
         <CardDescription>Deploy your new project in one-click.</CardDescription>
       </span>
         <div class="flex items-center space-x-2">
@@ -39,11 +39,11 @@ const Blogs = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="">Create Blog</Button>
+              <Button variant="">Add Use</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle>Create Blogs</DialogTitle>
+                <DialogTitle>Create Story</DialogTitle>
                 <DialogDescription>
                   Make changes to your profile here. Click save when you're
                   done.
@@ -71,7 +71,7 @@ const Blogs = () => {
                     <Label htmlFor="maxHeight">Associate badge with</Label>
                     <Select>
                     <SelectTrigger className="outline-none">
-                      <SelectValue placeholder="Blogs Position" />
+                      <SelectValue placeholder="Story Position" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="module">Module</SelectItem>
@@ -87,9 +87,9 @@ const Blogs = () => {
           </Dialog>
         </div>
       </div>
-      <BlogsTable />
+      <HowToUseTable />
     </div>
   );
 };
 
-export default Blogs;
+export default HowToUse ;

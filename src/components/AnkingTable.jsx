@@ -66,95 +66,23 @@ import { ClipboardPen, Trash2 } from "lucide-react";
 const data = [
   {
     id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
+    title: "Anki Page",
+    image: "-",
+    handle:'anki_page',
   },
   {
     id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    title: "blog title",
-    icon: "-",
-    catogory: "Public Health Sciences",
+    title: "Anking",
+    image: "-",
+    handle:'anking',
   },
 ];
 
 export const columns = [
   {
-    accessorKey: "icon",
-    header: "Icon",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("icon")}</div>,
+    accessorKey: "image",
+    header: "Image",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("image")}</div>,
   },
   {
     accessorKey: "title",
@@ -165,19 +93,20 @@ export const columns = [
   },
 
   {
-    accessorKey: "space",
+    accessorKey: "content",
     header: "",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("space")}</div>
+      <div className="capitalize">{row.getValue("")}</div>
     ),
   },
   {
-    accessorKey: "catogory",
-    header: "Catogory",
+    accessorKey: "handle",
+    header: "Handle",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("catogory")}</div>
+      <div className="">{row.getValue("handle")}</div>
     ),
   },
+ 
   {
     id: "actions",
     enableHiding: false,
@@ -193,7 +122,7 @@ export const columns = [
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle>Update Badge</DialogTitle>
+                <DialogTitle>Update Story</DialogTitle>
                 <DialogDescription>
                   Make changes to your profile here. Click save when you're
                   done.
@@ -241,7 +170,7 @@ export const columns = [
   },
 ];
 
-export function BlogsTable() {
+export function AnkingTable() {
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
   const [columnVisibility, setColumnVisibility] = useState({});
