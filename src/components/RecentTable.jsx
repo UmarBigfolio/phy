@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const RecentTable = () => {
   return (
@@ -17,12 +16,10 @@ const RecentTable = () => {
           <div className="space-y-8">
             <div className="flex items-center">
               <span className="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9">
-                <Image
-                  width={40}
-                  height={40}
+                <img
                   className="aspect-square h-full w-full"
                   alt="Avatar"
-                  src="/klklkl"
+                  src="https://ui.shadcn.com/avatars/01.png"
                 />
               </span>
               <div className="ml-4 space-y-1">
@@ -35,12 +32,10 @@ const RecentTable = () => {
             </div>
             <div className="flex items-center">
               <span className="relative shrink-0 overflow-hidden rounded-full flex h-9 w-9 items-center justify-center space-y-0 border">
-                <Image
-                  width={40}
-                  height={40}
+                <img
                   className="aspect-square h-full w-full"
                   alt="Avatar"
-                  src="/klklkl"
+                  src="https://ui.shadcn.com/avatars/01.png"
                 />
               </span>
               <div className="ml-4 space-y-1">
@@ -53,12 +48,10 @@ const RecentTable = () => {
             </div>
             <div className="flex items-center">
               <span className="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9">
-                <Image
-                  width={40}
-                  height={40}
+                <img
                   className="aspect-square h-full w-full"
                   alt="Avatar"
-                  src="/klklkl"
+                  src="https://ui.shadcn.com/avatars/01.png"
                 />
               </span>
               <div className="ml-4 space-y-1">
@@ -71,12 +64,10 @@ const RecentTable = () => {
             </div>
             <div className="flex items-center">
               <span className="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9">
-                <Image
-                  width={40}
-                  height={40}
+                <img
                   className="aspect-square h-full w-full"
                   alt="Avatar"
-                  src="/klklkl"
+                  src="https://ui.shadcn.com/avatars/01.png"
                 />
               </span>
               <div className="ml-4 space-y-1">
@@ -87,12 +78,10 @@ const RecentTable = () => {
             </div>
             <div className="flex items-center">
               <span className="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9">
-                <Image
-                  width={40}
-                  height={40}
+                <img
                   className="aspect-square h-full w-full"
                   alt="Avatar"
-                  src="/klklkl"
+                  src="https://ui.shadcn.com/avatars/01.png"
                 />
               </span>
               <div className="ml-4 space-y-1">
