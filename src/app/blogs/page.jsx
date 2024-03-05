@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { BlogsTable } from "../../components/BLogsTable";
+import { BlogsTable } from "../../components/BlogsTable";
 import { Input } from "../../components/ui/input";
 import { CardDescription } from "../../components/ui/card"
 import { Button } from "../../components/ui/button";
