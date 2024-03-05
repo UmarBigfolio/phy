@@ -36,7 +36,6 @@ const Coupons = () => {
       </span>
               <div class="flex items-center space-x-2">
           <div class="grid gap-2">
-            {/* <Input placeholder="Search Student" /> */}
           </div>
           <Dialog>
             <DialogTrigger asChild>

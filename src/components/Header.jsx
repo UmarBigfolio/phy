@@ -21,7 +21,7 @@ const Header = () => {
                 <img
                   className="filter invert-[100%] w-[120px] md:w-[200px] "
                   src="https://www.physeo.com/images/logo.png"
-                ></img>
+                />
               </span>
             </a>
           </div>
