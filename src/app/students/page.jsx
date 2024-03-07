@@ -28,13 +28,13 @@ import {
 const Students = () => {
  
   return (
-    <div className="pr-2 relative">
+    <div className="pr-2">
       <div className="flex items-center justify-between space-y-2 md:py-7 pl-6">
         <span>
           <h2 className="text-[1.875rem] font-bold">Students</h2>
           <CardDescription>Deploy your new project in one-click.</CardDescription>
         </span>
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <div className="grid gap-2 ">
             <Input
               placeholder="Search Student"
@@ -128,8 +128,8 @@ const Students = () => {
                 <Button type="submit">Submit</Button>
               </DialogFooter>
             </DialogContent>
-          </Dialog>
-        </div>
+          </Dialog> 
+        </div> */}
       </div>
       <DataTableDemo />
     </div>

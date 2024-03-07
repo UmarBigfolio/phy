@@ -74,3 +74,26 @@
     @apply bg-background text-foreground;
   }
 }
+ .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-upload input[type="file"] {
+            position: absolute;
+        }
+
+        .file-upload-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            padding: 8px 10px;
+            background-color: 'white';
+            color:black;
+            border: 1px solid #E1E7EF;
+            border-radius: 5px;
+            cursor: pointer;
+          font-size: 14px;
+        }

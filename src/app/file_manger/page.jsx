@@ -1,24 +1,14 @@
 "use client";
 import React, { useState } from "react";
 
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-
+import { CardDescription } from "../../components/ui/card"
 import {
   CaretSortIcon,
   ChevronDownIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "../components/ui/alert-dialog"
+
+import { Label } from "../../components/ui/label";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -31,30 +21,19 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { Label } from "./ui/label";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "./ui/dialog";
 
-import { Button } from "./ui/button";
-import { Checkbox } from "./ui/checkbox";
+import { Button } from "../../components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem 
+} from "../../components/ui/dropdown-menu";
 import {
   Select,
   SelectContent,
@@ -63,8 +42,17 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select"
-import { Input } from "./ui/input";
+} from "../../components/ui/select"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../components/ui/dialog";
+import { Input } from "../../components/ui/input";
 import {
   Table,
   TableBody,
@@ -72,37 +60,38 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/table";
-import { ClipboardPen, Trash2 } from "lucide-react";
-import Link from "next/link";
+} from "../../components/ui/table";
 
 const data = [
   {
     id: "m5gr84i9",
-    title: "what other student",
-    type:"rating",
-    image: "-",
-    visible:"show",
-    total_reviews:10,
-    link:'/student_review',
+    amount: 316,
+    status: "success",
+    media: "umar",
+    title:"-",
+    type:".jpg",
+
+   
+    
   },
   {
     id: "m5gr84i9",
-    title: "what past employee",
-    type:"content",
-    image: "-",
-    visible:'show',
-    total_reviews:2,
-    link:'/past_employee_review',
+    amount: 316,
+    status: "success",
+    media: "umar",
+    title:"-",
+    type:".jpg",
+
+   
   },
   
 ];
 
 export const columns = [
   {
-    accessorKey: "image",
-    header: "Image",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("image")}</div>,
+    accessorKey: "media",
+    header: "Media",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("media")}</div>,
   },
   {
     accessorKey: "title",
@@ -111,7 +100,6 @@ export const columns = [
       <div className="capitalize">{row.getValue("title")}</div>
     ),
   },
-
   {
     accessorKey: "type",
     header: "Type",
@@ -119,60 +107,27 @@ export const columns = [
       <div className="capitalize">{row.getValue("type")}</div>
     ),
   },
-  {
-    accessorKey: "visible",
-    header: "Visible",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("visible")}</div>
-    ),
-  },
-  {
-    accessorKey: "total_reviews",
-    header: "Total Reviews",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("total_reviews")}</div>
-    ),
-  },
- 
+
   {
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
       const payment = row.original;
       return (
-        <div className="flex items-center gap-5 justify-end">
-           <Link href={payment.link}>
-            <Button variant='secondary'>Edit</Button></Link>
-            <AlertDialog>
-  <AlertDialogTrigger>
-<Button variant='destructive'>Delete</Button>  
-  </AlertDialogTrigger>
-  <AlertDialogContent>
-    <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-      <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
-</AlertDialog>
-        </div>
+        <>
+         
+        </>
       );
     },
   },
 ];
 
-export function TestimonialsTable() {
-  const [sorting, setSorting] = useState([]);
-  const [columnFilters, setColumnFilters] = useState([]);
-  const [columnVisibility, setColumnVisibility] = useState({});
-  const [rowSelection, setRowSelection] = useState({});
-
+const FileManager = () => {
+    const [sorting, setSorting] = useState([]);
+    const [columnFilters, setColumnFilters] = useState([]);
+    const [columnVisibility, setColumnVisibility] = useState({});
+    const [rowSelection, setRowSelection] = useState({});
+    
   const table = useReactTable({
     data,
     columns,
@@ -191,18 +146,33 @@ export function TestimonialsTable() {
       rowSelection,
     },
   });
+  
+  return (<>
 
-  return (
+    <div className="pr-2">
+      <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
+      <span>
+        <h2 className="text-[1.875rem] font-bold">File manager</h2>
+        <CardDescription>Deploy your new project in one-click.</CardDescription>
+      </span>
+      </div>
+    </div>
     <div className="w-full pl-5">
       <div className="flex items-center py-4">
-        {/* <Input
-          placeholder="Search Student"
-          value={(table.getColumn("email")?.getFilterValue()) ?? ""}
+      <div className="flex flex-col md:flex-row items-center justify-between w-[100%] gap-5">
+        <div> <Input
+          placeholder="Search"
+          value={(table.getColumn("title")?.getFilterValue()) ?? ""}
           onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
+            table.getColumn("title")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm w-[240px]"
-        /> */}
+          className="max-w-sm w-[240px] focus-visible:ring-0"
+          /> </div>
+          <div className="flex items-center flex-col md:flex-row gap-3">
+           <Label htmlFor="file" className="ml-5">Upload file</Label>
+            <Input id="file" type="file" className=" w-[240px] lg:w-[660px] md:ml-2" />
+            </div>
+            <div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
@@ -229,6 +199,8 @@ export function TestimonialsTable() {
               })}
           </DropdownMenuContent>
         </DropdownMenu>
+        </div>
+        </div>
       </div>
       <div className="rounded-md border">
         <Table>
@@ -250,10 +222,10 @@ export function TestimonialsTable() {
               </TableRow>
             ))}
           </TableHeader>
-          <TableBody>
+          <TableBody >
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <TableRow
+                <TableRow 
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
@@ -305,5 +277,8 @@ export function TestimonialsTable() {
         </div>
       </div>
     </div>
+</>
   );
-}
+};
+
+export default FileManager;

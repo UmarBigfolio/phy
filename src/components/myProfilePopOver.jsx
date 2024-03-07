@@ -11,7 +11,7 @@ export function PopoverDemo() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-      <div className="flex justify-center items-center gap-2 pr-5 cursor-pointer">
+      <div className="flex justify-center items-center gap-2 pr-3 cursor-pointer">
           <svg
             viewBox="64 64 896 896"
             focusable="false"

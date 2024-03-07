@@ -48,6 +48,34 @@ const SideNav = () => {
       ),
     },
     {
+      text: "Courses",
+      href:"/courses",
+      icon: ( <User   width="24"
+       height="24"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+         strokeWidth="2"
+         strokeLinecap="round"
+         strokeLinejoin="round"
+       className="mr-2 h-4 w-4"/>
+      ),
+    },
+    {
+      text: "Users",
+      href:"/users",
+      icon: ( <User   width="24"
+       height="24"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+         strokeWidth="2"
+         strokeLinecap="round"
+         strokeLinejoin="round"
+       className="mr-2 h-4 w-4"/>
+      ),
+    },
+    {
       text: "Colleges",
       href:"/college",
       icon: (<Landmark  xmlns="http://www.w3.org/2000/svg"
@@ -225,15 +253,31 @@ const SideNav = () => {
       className="mr-2 h-4 w-4"/>
       ),
     },
+    {
+      text: "File manager",
+      href:"/file_manger",
+      icon: (<Layers xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 h-4 w-4"/>
+      ),
+    },
   ];
   
 
   return (
     <div className="mt-6 h-[1000px] border-r-[1px]">
-    <div className="w-16 md:w-[200px] pt-16">
+    <div className="w-14 md:w-[200px] pt-16">
       <nav className="grid gap-1 px-2">
         {links.map((link, index) => (
           <Link
+          
             key={index}
             className={`inline-flex items-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 justify-start ${
               activeLink === index ? "bg-black text-white" : "hover:bg-accent hover:text-accent-foreground"

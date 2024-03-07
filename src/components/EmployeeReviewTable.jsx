@@ -19,6 +19,18 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../components/ui/alert-dialog"
+
 import { Label } from "./ui/label";
 import {
   Dialog,
@@ -219,12 +231,11 @@ export const columns = [
     cell: ({ row }) => {
       const payment = row.original;
       return (
-        <div className="flex items-center gap-5 justify-center">
+        <div className="flex items-center gap-5 justify-end">
 
 <Dialog>
             <DialogTrigger asChild>
-            {/* <DotsHorizontalIcon  /> */}
-            <ClipboardPen className="w-[20px] cursor-pointer"/>
+        <Button variant='secondary'>Edit</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
@@ -269,8 +280,24 @@ export const columns = [
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Trash2  className="cursor-pointer w-[20px]"/>
-        </div>
+          <AlertDialog>
+  <AlertDialogTrigger>
+<Button variant='destructive'>Delete</Button>  
+  </AlertDialogTrigger>
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+      <AlertDialogAction>Continue</AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog> </div>
       );
     },
   },

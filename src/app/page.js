@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <>
       <div className="md:p-6 md:mt-1">
-        <div className="md:pb-6">
+        <div className="md:pb-6 pl-6 md:pl-0">
           <h1 className="text-[1.875rem] font-bold">Dashboard</h1>
           <CardDescription>Deploy your new project in one-click.</CardDescription>
 
@@ -94,7 +94,7 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className="px-5">
+      <div className="px-5 mt-4 md:mt-0">
         <RecentTable />
       </div>
     </>

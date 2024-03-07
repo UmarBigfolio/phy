@@ -7,6 +7,7 @@ import {
   ChevronDownIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
+import { ScrollArea } from "../components/ui/scroll-area";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -19,6 +20,17 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../components/ui/alert-dialog";
 import { Label } from "./ui/label";
 import {
   Dialog,
@@ -51,7 +63,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select"
+} from "./ui/select";
 import { Input } from "./ui/input";
 import {
   Table,
@@ -145,7 +157,7 @@ const data = [
   {
     id: "m5gr84i9",
     title: "how to use",
-image:'-',
+    image: "-",
     role: "Public Health Sciences",
   },
 ];
@@ -154,7 +166,9 @@ export const columns = [
   {
     accessorKey: "image",
     header: "Image",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("image")}</div>,
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("image")}</div>
+    ),
   },
   {
     accessorKey: "title",
@@ -177,12 +191,10 @@ export const columns = [
     cell: ({ row }) => {
       const payment = row.original;
       return (
-        <div className="flex items-center gap-5 justify-center">
-
-<Dialog>
+        <div className="flex items-center gap-5 justify-end">
+          <Dialog>
             <DialogTrigger asChild>
-            {/* <DotsHorizontalIcon  /> */}
-            <ClipboardPen className="w-[20px] cursor-pointer"/>
+              <Button variant="secondary">Edit</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
@@ -193,25 +205,25 @@ export const columns = [
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 ">
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge Title</Label>
-                    <Input
-                      id="title"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge URL</Label>
-                    <Input
-                      id="Badgeurl"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Associate badge with</Label>
-                    <Select>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Badge Title</Label>
+                  <Input
+                    id="title"
+                    defaultValue=""
+                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                  />
+                </div>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Badge URL</Label>
+                  <Input
+                    id="Badgeurl"
+                    defaultValue=""
+                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                  />
+                </div>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Associate badge with</Label>
+                  <Select>
                     <SelectTrigger className="outline-none">
                       <SelectValue placeholder="Badges Position" />
                     </SelectTrigger>
@@ -220,14 +232,31 @@ export const columns = [
                       <SelectItem value="courses">Courses</SelectItem>
                     </SelectContent>
                   </Select>
-                  </div>
                 </div>
+              </div>
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Trash2  className="cursor-pointer w-[20px]"/>
+          <AlertDialog>
+            <AlertDialogTrigger>
+              <Button variant="destructive">Delete</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete
+                  your account and remove your data from our servers.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction>Continue</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       );
     },

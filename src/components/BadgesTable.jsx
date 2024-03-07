@@ -8,6 +8,17 @@ import {
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
 import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../components/ui/alert-dialog"
+import {
   ColumnDef,
   ColumnFiltersState,
   SortingState,
@@ -211,11 +222,11 @@ export const columns = [
     cell: ({ row }) => {
       const payment = row.original;
       return (
-        <>
+        <div className="flex items-center gap-5 justify-end">
           <Dialog>
             <DialogTrigger asChild>
-              <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" />
-            </DialogTrigger>
+<Button variant='secondary'>Edit</Button>          
+  </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
                 <DialogTitle>Update Badge</DialogTitle>
@@ -259,7 +270,24 @@ export const columns = [
               </DialogFooter>
             </DialogContent>
           </Dialog>
-        </>
+          <AlertDialog>
+  <AlertDialogTrigger>
+<Button variant='destructive'>Delete</Button>  
+  </AlertDialogTrigger>
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+      <AlertDialogAction>Continue</AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>        </div>
       );
     },
   },
