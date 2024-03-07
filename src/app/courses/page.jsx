@@ -1,10 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  CaretSortIcon,
-  ChevronDownIcon,
-  DotsHorizontalIcon,
-} from "@radix-ui/react-icons";
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -30,16 +26,7 @@ import {
 } from "@tanstack/react-table";
 import { CardDescription } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "../../components/ui/dropdown-menu";
-import { Input } from "../../components/ui/input";
+
 import {
   Table,
   TableBody,
@@ -80,27 +67,6 @@ export const columns = [
       <div className="capitalize">{row.getValue("title")}</div>
     ),
   },
-  {
-    accessorKey: "email",
-    header: "",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("")}</div>,
-  },
-  {
-    accessorKey: "email",
-    header: "",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("")}</div>,
-  },
-  {
-    accessorKey: "email",
-    header: "",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("")}</div>,
-  },
-  {
-    accessorKey: "email",
-    header: "",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("")}</div>,
-  },
-
   {
     id: "actions",
     enableHiding: false,
