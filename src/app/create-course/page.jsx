@@ -24,7 +24,7 @@ const page = () => {
     <div className="flex mt-5">
       <div className="w-[25%]">
       
-        <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
+        <div className="flex items-center justify-between space-y-2 md:py-7 pl-6">
           <h2 className="text-[1.875rem] font-bold">Create Course</h2>
         </div>
     
@@ -63,9 +63,9 @@ const page = () => {
             <Label>Desktop Banner</Label>
             </div>
             <div className="flex gap-10">
-            <div class="file-upload mt-[1px]">
+            <div className="file-upload mt-[1px]">
               <button>
-                <label for="fileInput" class="file-upload-button">
+                <label htmlFor="fileInput" className="file-upload-button">
                   <ArrowUpToLine size={15} /> Upload
                 </label>
               </button>
@@ -79,9 +79,9 @@ const page = () => {
             <Label>Mobile Banner</Label>
             </div>
             <div className="flex gap-10">
-            <div class="file-upload mt-[1px]">
+            <div className="file-upload mt-[1px]">
               <button>
-                <label for="fileInput" class="file-upload-button">
+                <label htmlFor="fileInput" className="file-upload-button">
                   <ArrowUpToLine size={15} /> Upload
                 </label>
               </button>
@@ -95,9 +95,9 @@ const page = () => {
             <Label>Icon</Label>
             </div>
             <div className="flex gap-10">
-            <div class="file-upload mt-[1px]">
+            <div className="file-upload mt-[1px]">
               <button>
-                <label for="fileInput" class="file-upload-button">
+                <label htmlFor="fileInput" className="file-upload-button">
                   <ArrowUpToLine size={15} /> Upload
                 </label>
               </button>
