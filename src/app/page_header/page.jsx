@@ -24,6 +24,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../../components/ui/dialog";
+import Link from "next/link";
 
 const PageHeader = () => {
   return (
@@ -38,51 +39,10 @@ const PageHeader = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
+            <Link href='/create-page-header'>
               <Button variant="">Add Header</Button>
+              </Link>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Create Page Header</DialogTitle>
-                <DialogDescription>
-                  Make changes to your profile here. Click save when you're
-                  done.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 ">
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge Title</Label>
-                    <Input
-                      id="badgeTitle"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge URL</Label>
-                    <Input
-                      id="Badgeurl"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Associate badge with</Label>
-                    <Select>
-                    <SelectTrigger className="outline-none">
-                      <SelectValue placeholder="Blogs Position" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="module">Module</SelectItem>
-                      <SelectItem value="courses">Courses</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  </div>
-                </div>
-              <DialogFooter>
-                <Button type="submit">Submit</Button>
-              </DialogFooter>
-            </DialogContent>
           </Dialog>
         </div>
       </div>

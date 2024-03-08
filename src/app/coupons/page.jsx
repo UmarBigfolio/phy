@@ -43,7 +43,7 @@ const Coupons = () => {
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle>Create User</DialogTitle>
+                <DialogTitle>Create Coupons</DialogTitle>
                 <DialogDescription>
                   Make changes to your profile here. Click save when you're
                   done.

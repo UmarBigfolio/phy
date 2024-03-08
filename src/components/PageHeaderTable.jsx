@@ -73,6 +73,7 @@ import {
   TableRow,
 } from "./ui/table";
 import { ClipboardPen, Trash2 } from "lucide-react";
+import Link from "next/link";
 
 const data = [
   {
@@ -193,50 +194,10 @@ export const columns = [
 
 <Dialog>
             <DialogTrigger asChild>
+            <Link href='/update-page-header'>
             <Button variant='secondary'>Edit</Button>
+            </Link>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Update Story</DialogTitle>
-                <DialogDescription>
-                  Make changes to your profile here. Click save when you're
-                  done.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 ">
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge Title</Label>
-                    <Input
-                      id="title"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Badge URL</Label>
-                    <Input
-                      id="Badgeurl"
-                      defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                    />
-                  </div>
-                  <div className="flex flex-col items-right gap-1">
-                    <Label htmlFor="maxHeight">Associate badge with</Label>
-                    <Select>
-                    <SelectTrigger className="outline-none">
-                      <SelectValue placeholder="Badges Position" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="module">Module</SelectItem>
-                      <SelectItem value="courses">Courses</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  </div>
-                </div>
-              <DialogFooter>
-                <Button type="submit">Submit</Button>
-              </DialogFooter>
-            </DialogContent>
           </Dialog>
           <AlertDialog>
   <AlertDialogTrigger>

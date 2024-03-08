@@ -17,7 +17,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "../components/ui/alert-dialog"
+} from "../components/ui/alert-dialog";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -73,6 +73,7 @@ import {
   TableRow,
 } from "./ui/table";
 import { ClipboardPen, Trash2 } from "lucide-react";
+import Link from "next/link";
 
 const data = [
   {
@@ -126,71 +127,30 @@ export const columns = [
           <Dialog>
             <DialogTrigger asChild>
               {/* <DotsHorizontalIcon  /> */}
-              <Button variant='secondary'>Edit</Button>
+              <Link href="/update-custom-page">
+                <Button variant="secondary">Edit</Button>
+              </Link>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Update Story</DialogTitle>
-                <DialogDescription>
-                  Make changes to your profile here. Click save when you're
-                  done.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 ">
-                <div className="flex flex-col items-right gap-1">
-                  <Label htmlFor="maxHeight">Badge Title</Label>
-                  <Input
-                    id="title"
-                    defaultValue=""
-                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                  />
-                </div>
-                <div className="flex flex-col items-right gap-1">
-                  <Label htmlFor="maxHeight">Badge URL</Label>
-                  <Input
-                    id="Badgeurl"
-                    defaultValue=""
-                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
-                  />
-                </div>
-                <div className="flex flex-col items-right gap-1">
-                  <Label htmlFor="maxHeight">Associate badge with</Label>
-                  <Select>
-                    <SelectTrigger className="outline-none">
-                      <SelectValue placeholder="Badges Position" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="module">Module</SelectItem>
-                      <SelectItem value="courses">Courses</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-              <DialogFooter>
-                <Button type="submit">Submit</Button>
-              </DialogFooter>
-            </DialogContent>
           </Dialog>
-<AlertDialog>
-  <AlertDialogTrigger>
-<Button variant='destructive'>Delete</Button>  
-  </AlertDialogTrigger>
-  <AlertDialogContent>
-    <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-      <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
-</AlertDialog>
-
-    </div>
+          <AlertDialog>
+            <AlertDialogTrigger>
+              <Button variant="destructive">Delete</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete
+                  your account and remove your data from our servers.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction>Continue</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
       );
     },
   },
