@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import {
   CaretSortIcon,
   ChevronDownIcon,
@@ -78,7 +76,7 @@ const data = [
     id: "m5gr84i9",
     amount: 316,
     status: "success",
-    name: "umar",
+    name: "umar atiq",
     lastName: "bbb",
     phone: "4262055",
     role: "student",
@@ -421,7 +419,7 @@ export function DataTableDemo() {
   });
 
   return (
-    <div className="w-full pl-5">
+    <div className="w-full pl-2 2xl:pl-5">
       <div className="flex items-center py-4">
          <Input
           placeholder="Search Student"
@@ -429,7 +427,7 @@ export function DataTableDemo() {
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm w-[240px]"
+          className="max-w-sm w-[220px] md:w-[240px] focus-visible:ring-0"
         /> 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

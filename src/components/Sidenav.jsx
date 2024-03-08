@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import { ScrollArea } from "../components/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "../components/ui/scroll-area"
 import Link from 'next/link'
 import { Award, BookOpen, BookmarkCheck, CircleFadingPlus, FileSliders, Landmark, Layers, NotebookText, StarHalf, TabletSmartphone, User } from "lucide-react";
 const SideNav = () => {
@@ -272,8 +272,9 @@ const SideNav = () => {
   
 
   return (
-    <div className="mt-6 h-[1000px] border-r-[1px]">
-    <div className="w-14 md:w-[200px] pt-16">
+    <ScrollArea className='h-[800px]'>
+    <div className=" md:mt-6  md:border-r-[1px]">
+    <div className="w-14 md:w-[200px] pt-2 md:pt-16">
       <nav className="grid gap-1 px-2">
         {links.map((link, index) => (
           <Link
@@ -286,12 +287,13 @@ const SideNav = () => {
             onClick={() => handleLinkClick(index)}
           >
             {link.icon}
-            <span className="hidden md:inline">{link.text}</span>
+            <span>{link.text}</span>
           </Link>
         ))}
       </nav>
     </div>
     </div>
+    </ScrollArea>
   );
 };
 

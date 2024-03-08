@@ -319,7 +319,7 @@ export function BadgesTable() {
   });
 
   return (
-    <div className="w-full pl-5">
+    <div className="w-full pl-2 2xl:pl-5">
       <div className="flex items-center py-4">
         {/* <Input
           placeholder="Search Student"

@@ -28,7 +28,7 @@ import {
 const Book = () => {
   return (
     <div className="pr-2">
-      <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
+      <div class="flex items-center justify-between space-y-2 md:py-7 pl-2 2xl:pl-6">
       <span>
         <h2 className="text-[1.875rem] font-bold">Testimonials</h2>
         <CardDescription>Deploy your new project in one-click.</CardDescription>

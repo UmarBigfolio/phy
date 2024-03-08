@@ -29,7 +29,7 @@ import { Label } from "../../components/ui/label";
 const Coupons = () => {
   return (
     <div className="pr-2">
-      <div class="flex items-center justify-between space-y-2 md:py-7 pl-6">
+      <div class="flex items-center justify-between space-y-2 md:py-7 pl-2 2xl:pl-6">
       <span>
         <h2 className="text-[1.875rem] font-bold">Coupons Code</h2>
         <CardDescription>Deploy your new project in one-click.</CardDescription>
@@ -112,8 +112,8 @@ const Coupons = () => {
           
         </div>
       </div>
-      <Tabs defaultValue="paypal">
-        <TabsList className="ml-6">
+      <Tabs defaultValue="paypal"  >
+        <TabsList className="ml-2 md:ml-6">
           <TabsTrigger value="paypal">Paypal</TabsTrigger>
           <TabsTrigger value="stripe">Stripe </TabsTrigger>
         </TabsList>

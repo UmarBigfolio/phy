@@ -93,7 +93,7 @@ import {
         const payment = row.original;
         return (
           <>
-           <div>{null}</div>
+           
           </>
         );
       },
@@ -125,9 +125,9 @@ const FileManagerTable = () => {
     },
   });
   return (
-    <div>
+    <div className='pr-2'>
 
-<div className="w-full pl-5">
+<div className="w-full pl-2 2xl:pl-5">
       <div className="flex items-center py-4">
       <div className="flex flex-col md:flex-row items-center justify-between w-[100%] gap-5">
         <div> <Input

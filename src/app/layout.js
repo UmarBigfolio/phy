@@ -12,31 +12,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export default function RootLayout({ children }) {
-  const [isSideNavOpen, setIsSideNavOpen] = useState(true);
-
-  const toggleSideNav = () => {
-    setIsSideNavOpen(!isSideNavOpen);
-  };
 
   return (
     <html lang="en">
       <body className={inter.className} >
         <div className="max-w-[1550px] mx-auto">
       {/* <AdminLogin /> */}
-          <Header toggleSideNav={toggleSideNav}/>
-          <ScrollArea>
+          <Header/>
           <div className="flex">
-            {isSideNavOpen && 
-            <div className='navigation'>
-              <SideNav toggleSideNav={toggleSideNav}/>
-            </div>}
+            <div className='hidden md:block'>
+              <SideNav/>
+            </div>
             <div className="w-[100%]">
               <div className="h-14"></div>
-              {children}
+              {children} 
             </div>
           </div>
-          <ScrollBar orientation="horizontal" />
-          </ScrollArea>
         </div>
       </body>
     </html>

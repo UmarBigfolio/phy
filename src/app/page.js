@@ -63,7 +63,7 @@ export default function Home() {
 
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mx-auto px-5 md:px-0">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mx-auto px-4 md:px-0">
           {data.map((item) => {
             return (
               <>
@@ -94,7 +94,7 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className="px-5 mt-4 md:mt-0">
+      <div className="px-4 mt-4 md:mt-0">
         <RecentTable />
       </div>
     </>
