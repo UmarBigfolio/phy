@@ -36,24 +36,8 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem 
 } from "../../components/ui/dropdown-menu";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "../../components/ui/select"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "../../components/ui/dialog";
+
+
 import { Input } from "../../components/ui/input";
 import {
   Table,
@@ -72,19 +56,14 @@ const data = [
     media: "umar",
     title:"-",
     type:".jpg",
-
-   
-    
   },
   {
-    id: "m5gr84i9",
+    id: "m5gr84i9kjk",
     amount: 316,
     status: "success",
     media: "umar",
     title:"-",
-    type:".jpg",
-
-   
+    type:".jpg", 
   },
   
 ];
@@ -117,7 +96,7 @@ export const columns = [
       const payment = row.original;
       return (
         <>
-         
+         <div>{null}</div>
         </>
       );
     },
