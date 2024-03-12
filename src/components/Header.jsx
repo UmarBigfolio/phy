@@ -31,7 +31,7 @@ export function TypographySmall() {
   );
 }
 
-const Header = ({ toggleSideNav }) => {
+const Header = () => {
 
   return (<>
     <div className=" fixed w-full top-0 z-50 max-w-[1550px]">

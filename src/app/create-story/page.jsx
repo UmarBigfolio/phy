@@ -33,7 +33,7 @@ const page = () => {
     <div className="flex mt-5">
       <div className="w-[25%]">
 
-        <div className="flex items-center justify-between space-y-2 md:py-7 pl-2 2xl:pl-6">
+        <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
           <h2 className="text-[1.875rem] font-bold">Create Story</h2>
         </div>
 

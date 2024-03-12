@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollArea, ScrollBar } from "../components/ui/scroll-area"
 import Link from 'next/link'
 import { Award, BookOpen, BookmarkCheck, CircleFadingPlus, FileSliders, Landmark, Layers, NotebookText, StarHalf, TabletSmartphone, User } from "lucide-react";
@@ -9,7 +9,7 @@ const SideNav = () => {
 
   const handleLinkClick = (index) => {
     setActiveLink(index);
-  };
+  };  
 
   const links = [
     {
@@ -34,7 +34,7 @@ const SideNav = () => {
       ),
     },
     {
-      text: "Student",
+      text: "Users",
       href:"/students",
       icon: ( <User   width="24"
        height="24"
@@ -61,20 +61,20 @@ const SideNav = () => {
        className="mr-2 h-4 w-4"/>
       ),
     },
-    {
-      text: "Users",
-      href:"/users",
-      icon: ( <User   width="24"
-       height="24"
-       viewBox="0 0 24 24"
-       fill="none"
-       stroke="currentColor"
-         strokeWidth="2"
-         strokeLinecap="round"
-         strokeLinejoin="round"
-       className="mr-2 h-4 w-4"/>
-      ),
-    },
+    // {
+    //   text: "Users",
+    //   href:"/users",
+    //   icon: ( <User   width="24"
+    //    height="24"
+    //    viewBox="0 0 24 24"
+    //    fill="none"
+    //    stroke="currentColor"
+    //      strokeWidth="2"
+    //      strokeLinecap="round"
+    //      strokeLinejoin="round"
+    //    className="mr-2 h-4 w-4"/>
+    //   ),
+    // },
     {
       text: "Colleges",
       href:"/college",
@@ -274,7 +274,7 @@ const SideNav = () => {
   return (
     <ScrollArea className='h-[800px]'>
     <div className=" md:mt-6  md:border-r-[1px]">
-    <div className="w-14 md:w-[200px] pt-2 md:pt-16">
+    <div className="w-14 md:w-[200px] lg:w-[230px] pt-2 md:pt-16">
       <nav className="grid gap-1 px-2">
         {links.map((link, index) => (
           <Link

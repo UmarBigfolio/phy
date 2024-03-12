@@ -80,7 +80,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -88,7 +88,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -96,7 +96,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -104,7 +104,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -112,7 +112,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -120,7 +120,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -128,7 +128,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -136,7 +136,15 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
+  },
+  {
+    id: "m5gr84i9",
+    collegeName: "umar",
+    badgeTitle: "110th Login",
+    icon: "-",
+    associatedWith: "course",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -144,7 +152,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -152,7 +160,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -160,7 +168,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -168,7 +176,7 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
   {
     id: "m5gr84i9",
@@ -176,27 +184,19 @@ const data = [
     badgeTitle: "110th Login",
     icon: "-",
     associatedWith: "module",
-    module_courses: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    collegeName: "umar",
-    badgeTitle: "110th Login",
-    icon: "-",
-    associatedWith: "module",
-    module_courses: "Public Health Sciences",
+    module_courses: "22",
   },
 ];
 
 export const columns = [
   {
     accessorKey: "icon",
-    header: "Icon",
+    header: "Image",
     cell: ({ row }) => <div className="capitalize">{row.getValue("icon")}</div>,
   },
   {
     accessorKey: "badgeTitle",
-    header: "Badge Title",
+    header: "Title",
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("badgeTitle")}</div>
     ),
@@ -204,14 +204,14 @@ export const columns = [
 
   {
     accessorKey: "associatedWith",
-    header: "Associated With",
+    header: "Connected to",
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("associatedWith")}</div>
     ),
   },
   {
     accessorKey: "module_courses",
-    header: "Module/Courses",
+    header: "Students",
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("module_courses")}</div>
     ),

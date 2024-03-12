@@ -12,7 +12,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "../../components/ui/collapsible"
+} from "../../components/ui/collapsible";
 
 import { Input } from "../../components/ui/input";
 import { Label } from "../../components/ui/label";
@@ -27,15 +27,13 @@ import { ArrowUpToLine, Car, ChevronDown } from "lucide-react";
 
 const page = () => {
   return (
-    <div className="flex mt-5">
-      <div className="w-[25%]">
-
-        <div className="flex items-center justify-between space-y-2 md:py-7 pl-2 2xl:pl-6">
+    <div className="flex flex-col lg:flex-row mt-5">
+      <div className=" w-full lg:w-[25%]">
+        <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
           <h2 className="text-[1.875rem] font-bold">Create Course</h2>
         </div>
-
       </div>
-      <div className="w-[70%]">
+      <div className="w-full lg:w-[70%] px-2">
         <Card>
           <CardHeader>
             <CardTitle>Create project</CardTitle>
@@ -53,7 +51,7 @@ const page = () => {
               <div className="mt-3">
                 <Label>Desktop Banner</Label>
               </div>
-              <div className="flex gap-10">
+              <div className="flex flex-col gap-3 lg:flex-row lg:gap-10">
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
@@ -62,7 +60,11 @@ const page = () => {
                   </button>
                   <input type="file" id="fileInput" className="hidden" />
                 </div>
-                <Input type='text' placeholder='Or paste a link here' className='w-[86%]'></Input>
+                <Input
+                  type="text"
+                  placeholder="Or paste a link here"
+                  className="w-full lg:w-[86%]"
+                ></Input>
               </div>
             </div>
             <div>
@@ -78,10 +80,14 @@ const page = () => {
                   </button>
                   <input type="file" id="fileInput" className="hidden" />
                 </div>
-                <Input type='text' placeholder='Or paste a link here' className='w-[86%]'></Input>
+                <Input
+                  type="text"
+                  placeholder="Or paste a link here"
+                  className="w-[86%]"
+                ></Input>
               </div>
             </div>
-            <div >
+            <div>
               <div className="mt-3">
                 <Label>Icon</Label>
               </div>
@@ -94,52 +100,56 @@ const page = () => {
                   </button>
                   <input type="file" id="fileInput" className="hidden" />
                 </div>
-                <Input type='text' placeholder='Or paste a link here' className='w-[86%]'></Input>
+                <Input
+                  type="text"
+                  placeholder="Or paste a link here"
+                  className="w-[86%]"
+                ></Input>
               </div>
             </div>
-<Card className='mt-5'>
-            <Collapsible>
-              <CollapsibleTrigger className="p-3 flex gap-1 items-center justify-center" > <ChevronDown size={16}/>Steps</CollapsibleTrigger>
-              <CollapsibleContent>
-                <div className="steps px-4 pb-4">
-                  <div className="mt-3">
-                    <Label>Step 1</Label>
-                    <div className="flex gap-7">
-                      <Input placeholder='Name'></Input>
-                      <Input placeholder='Link'></Input>
+            <Card className="mt-5">
+              <Collapsible>
+                <CollapsibleTrigger className="p-3 flex gap-1 items-center justify-center">
+                  {" "}
+                  <ChevronDown size={16} />
+                  Steps
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <div className="steps px-4 pb-4">
+                    <div className="mt-3">
+                      <Label>Step 1</Label>
+                      <div className="flex gap-7">
+                        <Input placeholder="Name"></Input>
+                        <Input placeholder="Link"></Input>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-3">
-                    <Label>Step 2</Label>
-                    <div className="flex gap-7">
-                      <Input placeholder='Name'></Input>
-                      <Input placeholder='Link'></Input>
+                    <div className="mt-3">
+                      <Label>Step 2</Label>
+                      <div className="flex gap-7">
+                        <Input placeholder="Name"></Input>
+                        <Input placeholder="Link"></Input>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-3">
-                    <Label>Step 3</Label>
-                    <div className="flex gap-7">
-                      <Input placeholder='Name'></Input>
-                      <Input placeholder='Link'></Input>
+                    <div className="mt-3">
+                      <Label>Step 3</Label>
+                      <div className="flex gap-7">
+                        <Input placeholder="Name"></Input>
+                        <Input placeholder="Link"></Input>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-3">
-                    <Label>Step 4</Label>
-                    <div className="flex gap-7">
-                      <Input placeholder='Name'></Input>
-                      <Input placeholder='Link'></Input>
+                    <div className="mt-3">
+                      <Label>Step 4</Label>
+                      <div className="flex gap-7">
+                        <Input placeholder="Name"></Input>
+                        <Input placeholder="Link"></Input>
+                      </div>
                     </div>
+
+                    <div></div>
                   </div>
-
-                  <div>
-
-                  </div>
-
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
-</Card>
-
+                </CollapsibleContent>
+              </Collapsible>
+            </Card>
           </CardContent>
           <CardFooter className="flex justify-between">
             <Button variant="outline">Cancel</Button>

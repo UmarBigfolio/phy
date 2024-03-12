@@ -29,7 +29,7 @@ const Users = () => {
  
   return (
     <div className="pr-2 relative">
-      <div className="flex items-center justify-between space-y-2 md:py-7 pl-2 2xl:pl-6">
+      <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
         <span>
           <h2 className="text-[1.875rem] font-bold">Users</h2>
           <CardDescription>Deploy your new project in one-click.</CardDescription>

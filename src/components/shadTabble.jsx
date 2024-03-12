@@ -6,6 +6,18 @@ import {
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
 import {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "../components/ui/command"
+
+import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -41,7 +53,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
   DropdownMenuRadioGroup,
-  DropdownMenuRadioItem 
+  DropdownMenuRadioItem
 } from "./ui/dropdown-menu";
 import {
   Select,
@@ -70,6 +82,9 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
+import DatePicker from "./DatePicker";
+import { CircleFadingPlus, Search } from "lucide-react";
+import { ScrollArea } from "./ui/scroll-area";
 
 const data = [
   {
@@ -77,12 +92,13 @@ const data = [
     amount: 316,
     status: "success",
     name: "umar atiq",
-    lastName: "bbb",
+    user_name: "bbb",
     phone: "4262055",
     role: "student",
     course: "clinical",
     plan: "1 Year",
     expire: "-",
+    start_date: '2024-10-31',
     email: "ken99@yahoo.com",
   },
   {
@@ -90,12 +106,13 @@ const data = [
     amount: 316,
     status: "success",
     name: "umar",
-    lastName: "bbb",
+    user_name: "bbb",
     phone: "4262055",
     role: "student",
     course: "clinical",
     plan: "1 Year",
     expire: "-",
+    start_date: '2024-10-31',
     email: "ken99@gmail.com",
   },
   {
@@ -103,12 +120,13 @@ const data = [
     amount: 245,
     status: "pending",
     name: "Alice",
-    lastName: "Johnson",
+    user_name: "Johnson",
     phone: "1234567",
     role: "instructor",
     course: "programming",
     plan: "6 Months",
     expire: "2024-08-15",
+    start_date: '2024-10-31',
     email: "alice.j@example.com",
   },
   {
@@ -116,12 +134,13 @@ const data = [
     amount: 150,
     status: "success",
     name: "Elena",
-    lastName: "Garcia",
+    user_name: "Garcia",
     phone: "9876543",
     role: "student",
     course: "mathematics",
     plan: "3 Months",
     expire: "2024-06-30",
+    start_date: '2024-10-31',
     email: "elena_g@email.com",
   },
   {
@@ -129,12 +148,13 @@ const data = [
     amount: 200,
     status: "failed",
     name: "John",
-    lastName: "Doe",
+    user_name: "Doe",
     phone: "5551234",
     role: "student",
     course: "biology",
     plan: "1 Month",
     expire: "2024-03-15",
+    start_date: '2024-10-31',
     email: "johndoe@example.com",
   },
   {
@@ -142,12 +162,13 @@ const data = [
     amount: 430,
     status: "success",
     name: "Sophia",
-    lastName: "Brown",
+    user_name: "Brown",
     phone: "2223333",
     role: "instructor",
     course: "chemistry",
     plan: "1 Year",
     expire: "2025-02-01",
+    start_date: '2024-10-31',
     email: "sophiab@example.com",
   },
   {
@@ -155,12 +176,13 @@ const data = [
     amount: 280,
     status: "success",
     name: "Michael",
-    lastName: "Smith",
+    user_name: "Smith",
     phone: "7778888",
     role: "student",
     course: "physics",
     plan: "6 Months",
     expire: "2024-09-30",
+    start_date: '2024-10-31',
     email: "mike.smith@gmail.com",
   },
   {
@@ -168,12 +190,13 @@ const data = [
     amount: 180,
     status: "pending",
     name: "Julia",
-    lastName: "Lee",
+    user_name: "Lee",
     phone: "4445555",
     role: "student",
     course: "art history",
     plan: "3 Months",
     expire: "2024-07-10",
+    start_date: '2024-10-31',
     email: "julia.lee@example.com",
   },
   {
@@ -181,12 +204,13 @@ const data = [
     amount: 370,
     status: "success",
     name: "Daniel",
-    lastName: "White",
+    user_name: "White",
     phone: "9990000",
     role: "instructor",
     course: "music theory",
     plan: "1 Year",
     expire: "2025-01-01",
+    start_date: '2024-10-31',
     email: "dwhite@music.edu",
   },
   {
@@ -194,12 +218,13 @@ const data = [
     amount: 320,
     status: "failed",
     name: "Emma",
-    lastName: "Martinez",
+    user_name: "Martinez",
     phone: "1112222",
     role: "student",
     course: "psychology",
     plan: "1 Month",
     expire: "2024-03-20",
+    start_date: '2024-10-31',
     email: "emma.m@example.com",
   },
   {
@@ -207,28 +232,22 @@ const data = [
     amount: 500,
     status: "success",
     name: "David",
-    lastName: "Wilson",
+    user_name: "Wilson",
     phone: "6667777",
     role: "student",
     course: "geography",
     plan: "6 Months",
     expire: "2024-10-31",
+    start_date: '2024-10-31',
     email: "davidw@example.com",
   },
 ];
 
 export const columns = [
   {
-    accessorKey: "name",
-    header: "First Name",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("name")}</div>,
-  },
-  {
-    accessorKey: "lastName",
-    header: "Last Name",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("lastName")}</div>
-    ),
+    accessorKey: "user_name",
+    header: "Username",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("user_name")}</div>,
   },
   {
     accessorKey: "email",
@@ -262,8 +281,15 @@ export const columns = [
     cell: ({ row }) => <div className="capitalize">{row.getValue("plan")}</div>,
   },
   {
+    accessorKey: "start_date",
+    header: "Start date",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("start_date")}</div>
+    ),
+  },
+  {
     accessorKey: "expire",
-    header: "Expire",
+    header: "End date",
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("expire")}</div>
     ),
@@ -275,12 +301,14 @@ export const columns = [
     cell: ({ row }) => {
       const payment = row.original;
       return (
-        <div className="flex justify-end gap-5">
+        <div className="flex justify-end gap-5 ">
           <Dialog>
             <DialogTrigger asChild>
-            <Button variant='secondary'>Edit</Button>
+              <Button variant='secondary'>Edit</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="sm:max-w-[450px]">
+              <ScrollArea className="h-[80vh]">
+            <div className="mr-5">
               <DialogHeader>
                 <DialogTitle>Edit User</DialogTitle>
                 <DialogDescription>
@@ -290,25 +318,18 @@ export const columns = [
               </DialogHeader>
               <div className="grid gap-4">
                 <div className="flex flex-col items-right gap-1">
-                  <Label htmlFor="maxHeight">Email</Label>
+                  <Label htmlFor="maxHeight">Username</Label>
                   <Input
-                    id="email"
+                    id="lastName"
                     defaultValue=""
                     className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                   />
                 </div>
+
                 <div className="flex flex-col items-right gap-1">
-                  <Label htmlFor="maxHeight">First Name</Label>
+                  <Label htmlFor="maxHeight">Email</Label>
                   <Input
-                    id="firstName"
-                    defaultValue=""
-                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0 "
-                  />
-                </div>
-                <div className="flex flex-col items-right gap-1">
-                  <Label htmlFor="maxHeight">Last Name</Label>
-                  <Input
-                    id="lastName"
+                    id="email"
                     defaultValue=""
                     className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                   />
@@ -322,29 +343,21 @@ export const columns = [
                   />
                 </div>
                 <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">College</Label>
+                  <Input
+                    id="lastName"
+                    defaultValue=""
+                    className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                  />
+                </div>
+
+                <div className="flex flex-col items-right gap-1">
                   <Label htmlFor="maxHeight">Phone</Label>
                   <Input
                     id="phone"
                     defaultValue=""
                     className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
                   />
-                </div>
-
-                
-                <div className="flex flex-col items-right gap-1">
-                  <Label htmlFor="maxHeight">Role</Label>
-
-                  <Select>
-                    <SelectTrigger className="outline-none">
-                      <SelectValue placeholder="Role" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="user">user</SelectItem>
-                      <SelectItem value="admin">admin</SelectItem>
-                      <SelectItem value="super-user">super-user</SelectItem>
-                    </SelectContent>
-                  </Select>
-
                 </div>
                 <div className="flex flex-col items-right gap-1">
                   <Label htmlFor="maxHeight">Plans</Label>
@@ -360,31 +373,55 @@ export const columns = [
                   </Select>
 
                 </div>
-                 
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Role</Label>
+
+                  <Select>
+                    <SelectTrigger className="outline-none">
+                      <SelectValue placeholder="Role" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="user">User</SelectItem>
+                      <SelectItem value="admin">Admin</SelectItem>
+                      <SelectItem value="super-user">Super-admin</SelectItem>
+                    </SelectContent>
+                  </Select>
+
+                </div>
+
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">Start Date</Label>
+                  <DatePicker />
+                </div>
+                <div className="flex flex-col items-right gap-1">
+                  <Label htmlFor="maxHeight">End Date</Label>
+                  <DatePicker />
+                </div>
               </div>
-              <DialogFooter>
+              <DialogFooter className='py-4'>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
+              </div>
+              </ScrollArea>
             </DialogContent>
           </Dialog>
           <AlertDialog>
-  <AlertDialogTrigger>
-<Button variant='destructive'>Delete</Button>  
-  </AlertDialogTrigger>
-  <AlertDialogContent>
-    <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-      <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
-</AlertDialog>
+            <AlertDialogTrigger>
+              <Button variant='destructive'>Delete</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete your data from our server.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction>Delete</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
 
         </div>
       );
@@ -393,11 +430,12 @@ export const columns = [
 ];
 
 export function DataTableDemo() {
+  const [position, setPosition] = useState("bottom")
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
   const [columnVisibility, setColumnVisibility] = useState({});
   const [rowSelection, setRowSelection] = useState({});
-  
+
 
   const table = useReactTable({
     data,
@@ -420,18 +458,74 @@ export function DataTableDemo() {
 
   return (
     <div className="w-full pl-2 2xl:pl-5">
-      <div className="flex items-center py-4">
-         <Input
-          placeholder="Search Student"
+      <div className="flex flex-col lg:flex-row gap-3 items-center py-4">
+        <Input
+          placeholder="Search student"
           value={(table.getColumn("email")?.getFilterValue()) ?? ""}
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)
           }
           className="max-w-sm w-[220px] md:w-[240px] focus-visible:ring-0"
-        /> 
+        />
+        <div className="flex gap-3">
+        <div className="">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto">
+            <div>
+              <Button variant="outline"> <CircleFadingPlus size={15} className="mr-2" />Role</Button>
+            </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="">
+            <Command>
+              <CommandInput placeholder="Type a command or search..." />
+              <CommandList>
+                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandGroup>
+                  <CommandItem>Search Emoji</CommandItem>
+                </CommandGroup>
+                <CommandSeparator />
+                <CommandGroup heading="Settings">
+                  <CommandItem>Profile</CommandItem>
+                  <CommandItem>Billing</CommandItem>
+                  <CommandItem>Settings</CommandItem>
+                </CommandGroup>
+              </CommandList>
+            </Command>
+
+          </DropdownMenuContent>
+        </DropdownMenu>
+        </div>
+        <div>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <div>
+              <Button variant="outline"> <CircleFadingPlus size={15} className="mr-2" />Plan</Button>
+            </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="">
+            <Command>
+              <CommandInput placeholder="Type a command or search..." />
+              <CommandList>
+                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandGroup>
+                  <CommandItem>Search Emoji</CommandItem>
+                </CommandGroup>
+                <CommandSeparator />
+                <CommandGroup heading="Settings">
+                  <CommandItem>Profile</CommandItem>
+                  <CommandItem>Billing</CommandItem>
+                  <CommandItem>Settings</CommandItem>
+                </CommandGroup>
+              </CommandList>
+            </Command>
+
+          </DropdownMenuContent>
+        </DropdownMenu>
+        </div>
+        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" className="lg:ml-auto">
               Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
@@ -467,9 +561,9 @@ export function DataTableDemo() {
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </TableHead>
                   );
                 })}
@@ -479,7 +573,7 @@ export function DataTableDemo() {
           <TableBody >
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <TableRow 
+                <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
