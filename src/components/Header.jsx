@@ -51,7 +51,6 @@ const Header = () => {
 
           <div className="flex items-center justify-between space-x-2 md:justify-end">
             <TypographySmall />
-            {/* <button className="block md:hidden" onClick={toggleSideNav}><AlignLeft /></button> */}
             <div className="">
               <Sheet >
                 <SheetTrigger asChild>

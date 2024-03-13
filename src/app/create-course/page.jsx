@@ -24,21 +24,25 @@ import {
   SelectValue,
 } from "../../components/ui/select";
 import { ArrowUpToLine, Car, ChevronDown } from "lucide-react";
+import { Separator } from "../../components/ui/separator";
 
 const page = () => {
   return (
-    <div className="flex flex-col lg:flex-row mt-5">
+    <div className="flex flex-col lg:flex-row mt-5 lg:gap-8">
       <div className=" w-full lg:w-[25%]">
         <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
-          <h2 className="text-[1.875rem] font-bold">Create Course</h2>
+        <Card className='bg-[#EAEAEA] py-4 pl-6 pr-16 flex w-full'>
+          <h2 className="font-bold text-lg">Create Course</h2>
+          </Card>
         </div>
       </div>
-      <div className="w-full lg:w-[70%] px-2">
+      <div className="w-full lg:w-[70%] px-2 pt-7">
         <Card>
           <CardHeader>
             <CardTitle>Create project</CardTitle>
           </CardHeader>
-          <CardContent>
+          <Separator className='w-[95%] mx-auto'/>
+          <CardContent className='pt-5'>
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
@@ -51,7 +55,7 @@ const page = () => {
               <div className="mt-3">
                 <Label>Desktop Banner</Label>
               </div>
-              <div className="flex flex-col gap-3 lg:flex-row lg:gap-10">
+              <div className="flex gap-2.5 lg:gap-5">
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
@@ -63,7 +67,7 @@ const page = () => {
                 <Input
                   type="text"
                   placeholder="Or paste a link here"
-                  className="w-full lg:w-[86%]"
+                  className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
                 ></Input>
               </div>
             </div>
@@ -71,7 +75,7 @@ const page = () => {
               <div className="mt-3">
                 <Label>Mobile Banner</Label>
               </div>
-              <div className="flex gap-10">
+              <div className="flex gap-2.5 lg:gap-5">
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
@@ -83,7 +87,7 @@ const page = () => {
                 <Input
                   type="text"
                   placeholder="Or paste a link here"
-                  className="w-[86%]"
+                  className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
                 ></Input>
               </div>
             </div>
@@ -91,7 +95,7 @@ const page = () => {
               <div className="mt-3">
                 <Label>Icon</Label>
               </div>
-              <div className="flex gap-10">
+              <div className="flex gap-2.5 lg:gap-5">
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
@@ -103,13 +107,13 @@ const page = () => {
                 <Input
                   type="text"
                   placeholder="Or paste a link here"
-                  className="w-[86%]"
+                  className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
                 ></Input>
               </div>
             </div>
             <Card className="mt-5">
               <Collapsible>
-                <CollapsibleTrigger className="p-3 flex gap-1 items-center justify-center">
+                <CollapsibleTrigger className="p-3 flex gap-1 items-center justify-start w-full">
                   {" "}
                   <ChevronDown size={16} />
                   Steps

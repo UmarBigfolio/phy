@@ -97,3 +97,20 @@
             cursor: pointer;
           font-size: 14px;
         }
+
+        .custom-checkbox {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          width: 16px;
+          height: 16px;
+          border: 1px solid black; /* Border color */
+          border-radius: 3px;
+          outline: none;
+          cursor: pointer;
+        }
+      
+        .custom-checkbox:checked {
+          background-color: black; 
+          border-color: black; /* Change border color when checked */
+        }

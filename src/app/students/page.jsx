@@ -42,9 +42,10 @@ const Students = () => {
             <DialogTrigger asChild>
               <Button variant=''>Create User</Button>
             </DialogTrigger>
-            <DialogContent className="md:max-w-[425px]">
-              <ScrollArea className="h-[80vh]">
-            <div className="">
+            <DialogContent className="md:max-w-[430px]">
+            <div>
+              <ScrollArea className="h-[80vh] mt-5 w-[400px]">
+            <div className="lg:ml-[2px] lg:mr-5">
               <DialogHeader>
                 <DialogTitle>Create User</DialogTitle>
                 <DialogDescription>
@@ -53,7 +54,7 @@ const Students = () => {
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4">
-                <div className="flex flex-col items-right gap-1">
+                <div className="flex flex-col items-right gap-1 pt-2">
                   <Label htmlFor="maxHeight">Username</Label>
                   <Input
                     id="lastName"
@@ -139,6 +140,7 @@ const Students = () => {
               </DialogFooter>
               </div>
               </ScrollArea>
+              </div>
             </DialogContent>
           </Dialog> 
         </div> 
