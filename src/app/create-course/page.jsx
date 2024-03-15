@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -23,25 +24,38 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../components/ui/select";
-import { ArrowUpToLine, Car, ChevronDown } from "lucide-react";
+import { ArrowUpToLine, Car, ChevronDown, FileSliders, Landmark, Upload } from "lucide-react";
 import { Separator } from "../../components/ui/separator";
+import { Switch } from "../../components/ui/switch";
 
 const page = () => {
   return (
-    <div className="flex flex-col lg:flex-row mt-5 lg:gap-8">
+    <>
+    <div className="bg-[#eaeaea59] h-[100%] relative top-60"> </div>
+    <div className="relative top-[-100%]">
+        <h2 className="text-[1.875rem] font-bold  pl-2 2xl:pl-7 pt-7">Create a course</h2>
+    <div className="flex flex-col lg:flex-row mt-7 lg:gap-8 ">
       <div className=" w-full lg:w-[25%]">
-        <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
-        <Card className='bg-[#EAEAEA] py-4 pl-6 pr-16 flex w-full'>
-          <h2 className="font-bold text-lg">Create Course</h2>
+        <div className="flex items-center justify-between space-y-2 pb-7 px-2 2xl:pl-6">
+        <Card className='bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2'>
+        <FileSliders size={18} />
+          <h2 className="font-bold text-lg">Clinical / Preclinical</h2>
           </Card>
         </div>
+        {/* <div className="pt-10">
+        <h2 className="text-xs font-medium  pl-2 2xl:pl-7 ">Create a course</h2>
+        <h2 className="text-xs font-medium  pl-2 2xl:pl-7 ">Create a course</h2>
+        <h2 className="text-xs font-medium  pl-2 2xl:pl-7 ">Create a course</h2>  
+        <h2 className="text-xs font-medium  pl-2 2xl:pl-7 ">Create a course</h2>
+        <h2 className="text-xs font-medium  pl-2 2xl:pl-7 ">Create a course</h2>  
+        </div> */}
       </div>
-      <div className="w-full lg:w-[70%] px-2 pt-7">
+      <div className="w-full lg:w-[70%] px-2">
         <Card>
           <CardHeader>
             <CardTitle>Create project</CardTitle>
           </CardHeader>
-          <Separator className='w-[95%] mx-auto'/>
+          <Separator className='w-[85%] 2xl:w-[95%] mx-auto'/>
           <CardContent className='pt-5'>
             <form>
               <div className="grid w-full items-center gap-4">
@@ -59,7 +73,7 @@ const page = () => {
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
-                      <ArrowUpToLine size={15} /> Upload
+                      <Upload size={14} /> <span className="">Upload</span>
                     </label>
                   </button>
                   <input type="file" id="fileInput" className="hidden" />
@@ -79,7 +93,7 @@ const page = () => {
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
-                      <ArrowUpToLine size={15} /> Upload
+                      <Upload size={14} /> <span className="">Upload</span>
                     </label>
                   </button>
                   <input type="file" id="fileInput" className="hidden" />
@@ -99,7 +113,7 @@ const page = () => {
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
-                      <ArrowUpToLine size={15} /> Upload
+                      <Upload size={14} /> <span className="">Upload</span>
                     </label>
                   </button>
                   <input type="file" id="fileInput" className="hidden" />
@@ -122,30 +136,38 @@ const page = () => {
                   <div className="steps px-4 pb-4">
                     <div className="mt-3">
                       <Label>Step 1</Label>
-                      <div className="flex gap-7">
-                        <Input placeholder="Name"></Input>
-                        <Input placeholder="Link"></Input>
+                      <div className="flex gap-[.5rem] sm:gap-7">
+                        <Input className='focus-visible:ring-0' placeholder="Name"></Input>
+                        <Input className='focus-visible:ring-0' placeholder="Link"></Input>
+                        <Button variant='secondary'>Add</Button>
+                        <Switch />
                       </div>
                     </div>
                     <div className="mt-3">
                       <Label>Step 2</Label>
-                      <div className="flex gap-7">
-                        <Input placeholder="Name"></Input>
-                        <Input placeholder="Link"></Input>
+                      <div className="flex gap-[.5rem] sm:gap-7">
+                        <Input className='focus-visible:ring-0' placeholder="Name"></Input>
+                        <Input className='focus-visible:ring-0' placeholder="Link"></Input>
+                        <Button variant='secondary'>Add</Button>
+                        <Switch />
                       </div>
                     </div>
                     <div className="mt-3">
                       <Label>Step 3</Label>
-                      <div className="flex gap-7">
-                        <Input placeholder="Name"></Input>
-                        <Input placeholder="Link"></Input>
+                      <div className="flex gap-[.5rem] sm:gap-7">
+                        <Input className='focus-visible:ring-0' placeholder="Name"></Input>
+                        <Input className='focus-visible:ring-0' placeholder="Link"></Input>
+                        <Button variant='secondary'>Add</Button>
+                        <Switch />
                       </div>
                     </div>
                     <div className="mt-3">
                       <Label>Step 4</Label>
-                      <div className="flex gap-7">
-                        <Input placeholder="Name"></Input>
-                        <Input placeholder="Link"></Input>
+                      <div className="flex gap-[.5rem] sm:gap-7">
+                        <Input className='focus-visible:ring-0' placeholder="Name"></Input>
+                        <Input className='focus-visible:ring-0' placeholder="Link"></Input>
+                        <Button variant='secondary'>Add</Button>
+                        <Switch />
                       </div>
                     </div>
 
@@ -156,12 +178,16 @@ const page = () => {
             </Card>
           </CardContent>
           <CardFooter className="flex justify-between">
+          <Link href='/courses' >
             <Button variant="outline">Cancel</Button>
+            </Link>
             <Button>Create</Button>
           </CardFooter>
         </Card>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

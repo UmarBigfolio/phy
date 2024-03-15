@@ -1,11 +1,20 @@
-import React from "react";
+'use client'
+import { Eye, EyeOff } from "lucide-react";
+import React ,{useState} from "react";
 
 const AdminLogin = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [inputType, setInputType] = useState('password');
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+    setInputType(showPassword ? 'password' : 'text');
+  };
   return (
     <div className="mt-40">
       <div class="flex items-center justify-center w-full">
         <div class="rounded-xl border bg-card text-card-foreground shadow">
-          <div class="flex flex-col p-6 pr-48 space-y-1">
+          <div class="flex flex-col p-6 md:pr-20 lg:pr-32 2xl:pr-48 space-y-1">
             <h3 class="font-semibold tracking-tight text-2xl">
               Login to Physeo CMS
             </h3>
@@ -35,11 +44,29 @@ const AdminLogin = () => {
               >
                 Password
               </label>
-              <input
-                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                id="password"
-                type="password"
-              />
+              <div className="flex justify-end items-center">
+      <input 
+        className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+        id="password"
+        type={inputType}
+      />
+      {
+        showPassword ?  <Eye
+      size={20}
+        type="button"
+        onClick={togglePasswordVisibility}
+        className="mt-1 text-sm text-gray-600 hover:text-gray-800 focus:outline-none absolute mr-2 cursor-pointer"
+      >
+      </Eye>:<EyeOff 
+       size={20}
+        type="button"
+        onClick={togglePasswordVisibility}
+        className="mt-1 text-sm text-gray-600 hover:text-gray-800 focus:outline-none absolute mr-2 cursor-pointer">
+      </EyeOff>
+      }
+     
+      
+    </div>
             </div>
           </div>
           <div class="flex items-center p-6 pt-0">
