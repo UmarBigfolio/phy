@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
+
 import {
   CaretSortIcon,
   ChevronDownIcon,
@@ -79,13 +81,13 @@ const data = [
   {
     id: "m5gr84i9",
     title: "Anki Page",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     handle: "anki_page",
   },
   {
     id: "m5gr84i9",
     title: "Anking",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     handle: "anking",
   },
 ];
@@ -95,8 +97,9 @@ export const columns = [
     accessorKey: "image",
     header: "Image",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("image")}</div>
-    ),
+      <Avatar>
+      <AvatarImage src={row.getValue("image")}></AvatarImage> 
+      </Avatar>    ),
   },
   {
     accessorKey: "title",

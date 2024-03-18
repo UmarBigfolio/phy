@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
+
 import {
   CaretSortIcon,
   ChevronDownIcon,
@@ -79,13 +81,15 @@ const data = [
   {
     id: "m5gr84i9",
     title: "Clinical",
-    icon: "-",
+    icon: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+    video:"30"
    
   },
   {
     id: "m5grhj84i9",
     title: "preclinical",
-    icon: "-",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    video:"20"
   },
  
 ];
@@ -95,7 +99,9 @@ export const columns = [
     accessorKey: "icon",
     header: "Icon",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("icon")}</div>
+      <Avatar>
+      <AvatarImage src={row.getValue("icon")}></AvatarImage> 
+      </Avatar>
     ),
   },
   {
@@ -103,6 +109,13 @@ export const columns = [
     header: "Title",
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("title")}</div>
+    ),
+  },
+  {
+    accessorKey: "video",
+    header: "Video",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("video")}</div>
     ),
   },
 

@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
+
 import {
   CaretSortIcon,
   ChevronDownIcon,
@@ -78,7 +80,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -86,7 +89,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -94,7 +98,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -102,7 +107,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -110,7 +116,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -118,7 +125,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -126,7 +134,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -134,7 +143,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -142,7 +152,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "course",
     module_courses: "22",
   },
@@ -150,7 +161,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -158,7 +170,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -166,7 +179,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -174,7 +188,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -182,7 +197,8 @@ const data = [
     id: "m5gr84i9",
     collegeName: "umar",
     badgeTitle: "110th Login",
-    icon: "-",
+        image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+
     associatedWith: "module",
     module_courses: "22",
   },
@@ -190,9 +206,11 @@ const data = [
 
 export const columns = [
   {
-    accessorKey: "icon",
+    accessorKey: "image",
     header: "Image",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("icon")}</div>,
+    cell: ({ row }) => <Avatar>
+    <AvatarImage src={row.getValue("image")}></AvatarImage> 
+    </Avatar> ,
   },
   {
     accessorKey: "badgeTitle",

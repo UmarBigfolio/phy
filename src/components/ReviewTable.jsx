@@ -74,6 +74,7 @@ import {
 } from "./ui/table";
 import { ClipboardPen, Trash2 } from "lucide-react";
 import Link from "next/link";
+import { Avatar, AvatarImage } from "./ui/avatar";
 
 const data = [
   {
@@ -81,7 +82,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -89,7 +90,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -97,7 +98,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -105,7 +106,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -113,7 +114,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -121,7 +122,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -129,7 +130,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -137,7 +138,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -145,7 +146,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -153,7 +154,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -161,7 +162,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -169,7 +170,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -177,7 +178,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
   {
@@ -185,7 +186,7 @@ const data = [
     title: "Review title",
     description:"---",
     rating:'4',
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     role: "Public Health Sciences",
   },
 ];
@@ -194,7 +195,10 @@ export const columns = [
   {
     accessorKey: "image",
     header: "Image",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("image")}</div>,
+    cell: ({ row }) => 
+    <Avatar>
+    <AvatarImage src={row.getValue("image")}></AvatarImage>
+    </Avatar>
   },
   {
     accessorKey: "title",

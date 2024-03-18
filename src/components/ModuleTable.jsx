@@ -1,23 +1,15 @@
 "use client";
 import React, { useState } from "react";
-
+import Link from "next/link";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
+
 import {
   CaretSortIcon,
   ChevronDownIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "../components/ui/alert-dialog"
+import { ScrollArea } from "../components/ui/scroll-area";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -30,6 +22,17 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../components/ui/alert-dialog";
 import { Label } from "./ui/label";
 import {
   Dialog,
@@ -62,7 +65,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select"
+} from "./ui/select";
 import { Input } from "./ui/input";
 import {
   Table,
@@ -73,111 +76,130 @@ import {
   TableRow,
 } from "./ui/table";
 import { ClipboardPen, Trash2 } from "lucide-react";
-import Link from "next/link";
-import { Avatar, AvatarImage } from "./ui/avatar";
 
 const data = [
   {
     id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    title: "Clinical",
+    icon: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
+    course:"clinical"
+   
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
+  }, {
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
+  },
+
+   {
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
+  },
+   {
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
+  },
+   {
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
+  }, {
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
   {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
+    id: "m5grhj84i9",
+    title: "preclinical",
+    icon:'https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj',
+    course:"clinical"
   },
-  {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
-  },
-  {
-    id: "m5gr84i9",
-    name: "Story",
-    image: "https://physeo-prod.s3.amazonaws.com/1708977636110-Emily.png",
-    role: "Public Health Sciences",
-  },
+
+ 
 ];
 
 export const columns = [
   {
-    accessorKey: "image",
-    header: "Image",
-    cell: ({ row }) =>
-    
-    <Avatar>
-      <AvatarImage src={row.getValue("image")}></AvatarImage>
-    </Avatar>
+    accessorKey: "icon",
+    header: "Icon",
+    cell: ({ row }) => (
+      <Avatar>
+      <AvatarImage src={row.getValue("icon")}></AvatarImage> 
+      </Avatar>
+    ),
   },
   {
-    accessorKey: "name",
-    header: "Name",
+    accessorKey: "title",
+    header: "Title",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("name")}</div>
+      <div className="capitalize">{row.getValue("title")}</div>
+    ),
+  },
+  {
+    accessorKey: "course",
+    header: "Course",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("course")}</div>
     ),
   },
 
@@ -189,52 +211,44 @@ export const columns = [
     ),
   },
   {
-    accessorKey: "role",
-    header: "Role",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("role")}</div>
-    ),
-  },
-  {
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
       const payment = row.original;
       return (
         <div className="flex items-center gap-5 justify-end">
-
-<Dialog>
+          <Dialog>
             <DialogTrigger asChild>
-            <Link href='/update-story'>
-          <Button variant='secondary'>Edit</Button>
-          </Link>
+            <Link href='/module/edit'>
+              <Button variant="secondary">Edit</Button>
+              </Link>
             </DialogTrigger>
           </Dialog>
           <AlertDialog>
-  <AlertDialogTrigger>
-<Button variant='destructive'>Delete</Button>  
-  </AlertDialogTrigger>
-  <AlertDialogContent>
-    <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-      <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
-</AlertDialog>
+            <AlertDialogTrigger>
+              <Button variant="destructive">Delete</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete
+                  your account and remove your data from our servers.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction>Continue</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       );
     },
   },
 ];
 
-export function OurStoryTable() {
+export function ModuleTable() {
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
   const [columnVisibility, setColumnVisibility] = useState({});

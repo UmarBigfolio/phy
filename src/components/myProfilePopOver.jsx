@@ -6,6 +6,7 @@ import {
 } from "../components/ui/popover"
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 export function PopoverDemo() {
   return (
@@ -44,6 +45,7 @@ export function PopoverDemo() {
     className="-mx-1 my-1 h-px bg-muted"
   ></div>
   <div role="group">
+  <Link href='/profile'>
     <div
       role="menuitem"
       className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
@@ -56,16 +58,7 @@ export function PopoverDemo() {
         ⇧⌘P
       </span>
     </div>
-    <div
-      role="menuitem"
-      className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-      tabIndex="-1"
-      data-orientation="vertical"
-      data-radix-collection-item=""
-    >
-      Billing
-      <span className="ml-auto text-xs tracking-widest opacity-60">⌘B</span>
-    </div>
+    </Link>
     <div
       role="menuitem"
       className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
@@ -75,15 +68,6 @@ export function PopoverDemo() {
     >
       Settings
       <span className="ml-auto text-xs tracking-widest opacity-60">⌘S</span>
-    </div>
-    <div
-      role="menuitem"
-      className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-      tabIndex="-1"
-      data-orientation="vertical"
-      data-radix-collection-item=""
-    >
-      New Team
     </div>
   </div>
   <div

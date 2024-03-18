@@ -73,91 +73,92 @@ import {
   TableRow,
 } from "./ui/table";
 import { ClipboardPen, Trash2 } from "lucide-react";
+import { Avatar, AvatarImage } from "./ui/avatar";
 
 const data = [
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
   {
     id: "m5gr84i9",
     title: "Book title",
     type:"preclinical",
-    image: "-",
+    image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
   },
 ];
 
@@ -165,7 +166,9 @@ export const columns = [
   {
     accessorKey: "image",
     header: "Image",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("image")}</div>,
+    cell: ({ row }) => <Avatar>
+      <AvatarImage src={row.getValue("image")}></AvatarImage>
+    </Avatar>
   },
   {
     accessorKey: "title",

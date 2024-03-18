@@ -113,7 +113,7 @@ const Coupons = () => {
         </div>
       </div>
       <Tabs defaultValue="paypal"  >
-        <TabsList className="ml-2 md:ml-6">
+        <TabsList className="ml-2 2xl:ml-6">
           <TabsTrigger value="paypal">Paypal</TabsTrigger>
           <TabsTrigger value="stripe">Stripe </TabsTrigger>
         </TabsList>
