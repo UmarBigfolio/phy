@@ -13,6 +13,7 @@ import {
   DialogTrigger,
 } from "../../components/ui/dialog";
 import { Button } from "../../components/ui/button";
+import Link from "next/link";
 
 
 const College = () => {
@@ -30,9 +31,11 @@ const College = () => {
 
           <Dialog>
             <DialogTrigger asChild>
+            <Link href='/college/create'>
               <Button variant="">Insert College</Button>
+            </Link>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            {/* <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
                 <DialogTitle>Insert College</DialogTitle>
                 <DialogDescription>
@@ -71,7 +74,7 @@ const College = () => {
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
-            </DialogContent>
+            </DialogContent> */}
           </Dialog>
 
         

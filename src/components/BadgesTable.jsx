@@ -74,6 +74,7 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
+import Link from "next/link";
 
 const data = [
   {
@@ -243,9 +244,11 @@ export const columns = [
         <div className="flex items-center gap-5 justify-end">
           <Dialog>
             <DialogTrigger asChild>
+            <Link href='badges/edit'>
 <Button variant='secondary'>Edit</Button>          
+</Link> 
   </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            {/* <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
                 <DialogTitle>Update Badge</DialogTitle>
                 <DialogDescription>
@@ -286,7 +289,7 @@ export const columns = [
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
-            </DialogContent>
+            </DialogContent> */}
           </Dialog>
           <AlertDialog>
   <AlertDialogTrigger>

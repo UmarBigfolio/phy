@@ -54,7 +54,7 @@ const SideNav = () => {
     },
     {
       text: "Users",
-      href: "/students",
+      href: "/user",
       icon: (
         <User
           width="24"
@@ -87,8 +87,62 @@ const SideNav = () => {
       ),
     },
     {
+      text: "Modules",
+      href: "/module",
+      icon: (
+        <BookmarkCheck
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="mr-2 h-4 w-4"
+        />
+      ),
+    },
+    {
+      text: "Submodules",
+      href: "/submodules",
+      icon: (
+        <BookmarkCheck
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="mr-2 h-4 w-4"
+        />
+      ),
+    },
+    {
+      text: "Videos",
+      href: "/videos",
+      icon: (
+        <BookmarkCheck
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="mr-2 h-4 w-4"
+        />
+      ),
+    },
+    {
       text: "ANKING",
-      href: "/custom_pages",
+      href: "/anking",
       icon: (
         <Layers
           xmlns="http://www.w3.org/2000/svg"
@@ -145,25 +199,6 @@ const SideNav = () => {
       href: "/college",
       icon: (
         <Landmark
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4"
-        />
-      ),
-    },
-
-    {
-      text: "Modules",
-      href: "/module",
-      icon: (
-        <BookmarkCheck
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -332,8 +367,8 @@ const SideNav = () => {
   ];
 
   return (
-    <ScrollArea className="h-[800px]">
-      <div className=" md:mt-6  md:border-r-[1px]">
+    <ScrollArea className="h-[100vh] ">
+      <div className=" md:mt-6  md:border-r-[1px] mb-5">
         <div className="w-14 md:w-[200px] lg:w-[230px] pt-2 md:pt-16">
           <nav className="grid gap-1 px-2">
             {links.map((link, index) => (

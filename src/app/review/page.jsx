@@ -39,7 +39,7 @@ const Review = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-            <Link href='/create-home-page-review'>
+            <Link href='/review/create'>
               <Button variant="">Create Review</Button>
               </Link>
             </DialogTrigger>

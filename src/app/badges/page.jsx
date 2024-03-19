@@ -24,6 +24,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../../components/ui/dialog";
+import Link from "next/link";
 
 const Badges = () => {
   return (
@@ -38,9 +39,11 @@ const Badges = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
+            <Link href='badges/create'>
               <Button variant="">Create Badge</Button>
+              </Link>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            {/* <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
                 <DialogTitle>Create Badge</DialogTitle>
                 <DialogDescription>
@@ -82,7 +85,7 @@ const Badges = () => {
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
-            </DialogContent>
+            </DialogContent> */}
           </Dialog>
         </div>
       </div>

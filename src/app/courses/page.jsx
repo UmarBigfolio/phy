@@ -39,7 +39,7 @@ const page = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-            <Link href='/create-course'>
+            <Link href='/courses/create'>
               <Button variant="">Add Course</Button>
               </Link>
             </DialogTrigger>

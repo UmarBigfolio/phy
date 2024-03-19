@@ -66,6 +66,7 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
+import Link from "next/link";
 
 const data = [
   {
@@ -239,10 +240,11 @@ export const columns = [
             <div className="flex justify-end gap-5">
         <Dialog>
             <DialogTrigger asChild>
-            {/* <DotsHorizontalIcon className="h-4 w-4 cursor-pointer" /> */}
+<Link href='/college/edit' >
         <Button variant='secondary'>Edit</Button>
+</Link>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            {/* <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
                 <DialogTitle>Edit College</DialogTitle>
                 <DialogDescription>
@@ -279,7 +281,7 @@ export const columns = [
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
-            </DialogContent>
+            </DialogContent> */}
           </Dialog>
           <AlertDialog>
   <AlertDialogTrigger>

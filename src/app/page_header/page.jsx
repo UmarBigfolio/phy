@@ -39,7 +39,7 @@ const PageHeader = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-            <Link href='/create-page-header'>
+            <Link href='/page_header/create'>
               <Button variant="">Add Header</Button>
               </Link>
             </DialogTrigger>

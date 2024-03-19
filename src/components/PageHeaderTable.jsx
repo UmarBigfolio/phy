@@ -199,7 +199,7 @@ export const columns = [
 
 <Dialog>
             <DialogTrigger asChild>
-            <Link href='/update-page-header'>
+            <Link href='/page_header/edit'>
             <Button variant='secondary'>Edit</Button>
             </Link>
             </DialogTrigger>

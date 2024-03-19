@@ -30,7 +30,7 @@ const Story = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-            <Link href='/create-story'>
+            <Link href='/story/create'>
               <Button variant="">Create Story</Button>
               </Link>
             </DialogTrigger>

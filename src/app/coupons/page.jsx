@@ -25,6 +25,7 @@ import {
   DialogTrigger,
 } from "../../components/ui/dialog";
 import { Label } from "../../components/ui/label";
+import Link from "next/link";
 
 const Coupons = () => {
   return (
@@ -39,9 +40,11 @@ const Coupons = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
+            <Link href='/coupons/create'>
             <Button variant="">Create Coupons</Button>
+            </Link>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            {/* <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
                 <DialogTitle>Create Coupons</DialogTitle>
                 <DialogDescription>
@@ -106,7 +109,7 @@ const Coupons = () => {
               <DialogFooter>
                 <Button type="submit">Submit</Button>
               </DialogFooter>
-            </DialogContent>
+            </DialogContent> */}
           </Dialog>
 
           

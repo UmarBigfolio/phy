@@ -5,9 +5,9 @@ import { Button } from '../../components/ui/button';
 import { MinusCircle, PlusCircle } from 'lucide-react';
 
 function DynamicInputFields() {
-  const [inputs, setInputs] = useState(['', '']); 
+  const [inputs, setInputs] = useState(['']); 
   const handleAddInput = () => {
-    setInputs([...inputs, '', '']);
+    setInputs([...inputs, '']);
   };
 
   const handleInputChange = (index, value) => {

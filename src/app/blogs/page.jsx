@@ -39,7 +39,7 @@ const Blogs = () => {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-            <Link href='/create-blog'>
+            <Link href='/blogs/create'>
               <Button variant="">Create Blog</Button>
               </Link>
             </DialogTrigger>

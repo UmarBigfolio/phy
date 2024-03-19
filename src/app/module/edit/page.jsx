@@ -8,14 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../../../components/ui/card";
-import { Textarea } from "../../../components/ui/textarea";
-import { Checkbox } from "../../../components/ui/checkbox";
-
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "../../../components/ui/collapsible";
 
 import { Input } from "../../../components/ui/input";
 import { Label } from "../../../components/ui/label";
@@ -27,10 +19,11 @@ import {
   SelectValue,
 } from "../../../components/ui/select";
 import { ArrowUpToLine, Car, ChevronDown, Upload } from "lucide-react";
+import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="flex mt-5">
+    <div className="flex mt-20">
       <div className="w-[25%]">
         <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
           <h2 className="text-[1.875rem] font-bold">Update Module</h2>
@@ -196,7 +189,9 @@ const page = () => {
             </form>
           </CardContent>
           <CardFooter className="flex justify-between">
+          <Link href='/module'>
             <Button variant="outline">Cancel</Button>
+          </Link>
             <Button>Update</Button>
           </CardFooter>
         </Card>

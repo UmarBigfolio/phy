@@ -232,7 +232,7 @@ export const columns = [
 
 <Dialog>
             <DialogTrigger asChild>
-            <Link href='/update-home-page-review'>
+            <Link href='/review/edit'>
             <Button variant='secondary'>Edit</Button>
             </Link>
             </DialogTrigger>

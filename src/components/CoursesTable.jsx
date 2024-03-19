@@ -135,7 +135,7 @@ export const columns = [
         <div className="flex items-center gap-5 justify-end">
           <Dialog>
             <DialogTrigger asChild>
-            <Link href='/edit-course'>
+            <Link href='/courses/edit'>
               <Button variant="secondary">Edit</Button>
               </Link>
             </DialogTrigger>

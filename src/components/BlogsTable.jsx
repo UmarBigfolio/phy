@@ -205,7 +205,7 @@ export const columns = [
 
           <Dialog>
             <DialogTrigger asChild>
-              <Link href='/update-blog'>
+              <Link href='/blogs/edit'>
                 <Button variant='secondary'>Edit</Button>
               </Link>
             </DialogTrigger>

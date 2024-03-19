@@ -130,7 +130,7 @@ export const columns = [
           <Dialog>
             <DialogTrigger asChild>
               {/* <DotsHorizontalIcon  /> */}
-              <Link href="/update-custom-page">
+              <Link href="/anking/edit">
                 <Button variant="secondary">Edit</Button>
               </Link>
             </DialogTrigger>
