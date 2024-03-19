@@ -5,7 +5,6 @@ import { Button } from "../../components/ui/button";
 import Link from "next/link";
 
 const page = () => {
- 
   return (
     <div className="pr-2">
       <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
