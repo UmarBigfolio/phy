@@ -124,7 +124,7 @@ const SideNav = () => {
     },
     {
       text: "Videos",
-      href: "/videos",
+      href: "/Video",
       icon: (
         <BookmarkCheck
           xmlns="http://www.w3.org/2000/svg"
