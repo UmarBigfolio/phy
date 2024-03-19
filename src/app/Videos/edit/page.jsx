@@ -50,7 +50,7 @@ import { Checkbox } from "../../../components/ui/checkbox";
 // import { Button } from '../../../components/ui/button';
 import { MinusCircle, PlusCircle } from "lucide-react";
 
-const page = () => {
+const Page = () => {
   const [inputs, setInputs] = useState([""]);
   const handleAddInput = () => {
     setInputs([...inputs, ""]);
@@ -436,4 +436,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
