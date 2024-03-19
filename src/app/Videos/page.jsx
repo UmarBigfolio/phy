@@ -1,11 +1,10 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import { CardDescription } from "../../components/ui/card"
 import {VideosTable} from "../../components/VideosTable"
 import { Button } from "../../components/ui/button";
 import Link from "next/link";
 
-const Videos = () => {
+const page = () => {
  
   return (
     <div className="pr-2">
@@ -26,4 +25,4 @@ const Videos = () => {
   );
 };
 
-export default Videos;
+export default page;

@@ -46,11 +46,9 @@ import {
 } from "../../../components/ui/toggle-group";
 import { Textarea } from "../../../components/ui/textarea";
 import { Checkbox } from "../../../components/ui/checkbox";
-// import { Input } from '../../../components/ui/input';
-// import { Button } from '../../../components/ui/button';
 import { MinusCircle, PlusCircle } from "lucide-react";
 
-const Page = () => {
+const page = () => {
   const [inputs, setInputs] = useState([""]);
   const handleAddInput = () => {
     setInputs([...inputs, ""]);
@@ -436,4 +434,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default page;

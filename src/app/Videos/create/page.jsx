@@ -48,7 +48,7 @@ import { Textarea } from "../../../components/ui/textarea";
 import { Checkbox } from "../../../components/ui/checkbox";
 import { MinusCircle, PlusCircle } from "lucide-react";
 
-const Page = () => {
+const page = () => {
   const [inputs, setInputs] = useState([""]);
 
   const handleAddInput = () => {
@@ -435,4 +435,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default page;
