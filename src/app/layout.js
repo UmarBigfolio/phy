@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} >
         <div className="">
-      {/* <AdminLogin /> */}
           <Header/>
           <div className="flex">
             <div className='hidden md:block'>

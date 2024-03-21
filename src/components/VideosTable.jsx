@@ -132,7 +132,7 @@ export const columns = [
         <div className="flex justify-end gap-5 ">
           <Dialog>
             <DialogTrigger asChild>
-              <Link href="videos/edit">
+              <Link href="Video/edit">
                 <Button variant="secondary">Edit</Button>
               </Link>
             </DialogTrigger>

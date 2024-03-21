@@ -32,7 +32,7 @@ import Link from "next/link";
 const Students = () => {
  
   return (
-    <div className="pr-2">
+    <div className="pr-2 ">
       <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
         <span>
           <h2 className="text-[1.875rem] font-bold">Users</h2>

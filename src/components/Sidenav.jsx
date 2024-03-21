@@ -367,8 +367,7 @@ const SideNav = () => {
   ];
 
   return (
-    <ScrollArea className="h-[100vh] ">
-      <div className=" md:mt-6  md:border-r-[1px] mb-5">
+      <div className=" md:mt-6  md:border-r-[1px] mb-5 h-[100%]">
         <div className="w-14 md:w-[200px] lg:w-[230px] pt-2 md:pt-16">
           <nav className="grid gap-1 px-2">
             {links.map((link, index) => (
@@ -389,7 +388,6 @@ const SideNav = () => {
           </nav>
         </div>
       </div>
-    </ScrollArea>
   );
 };
 
