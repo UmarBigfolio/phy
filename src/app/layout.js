@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} >
-        <div className="max-w-[1550px] mx-auto">
+        <div className="">
       {/* <AdminLogin /> */}
           <Header/>
           <div className="flex">

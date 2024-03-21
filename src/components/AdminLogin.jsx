@@ -1,14 +1,14 @@
-'use client'
+"use client";
 import { Eye, EyeOff } from "lucide-react";
-import React ,{useState} from "react";
+import React, { useState } from "react";
 
 const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [inputType, setInputType] = useState('password');
+  const [inputType, setInputType] = useState("password");
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
-    setInputType(showPassword ? 'password' : 'text');
+    setInputType(showPassword ? "password" : "text");
   };
   return (
     <div className="mt-40">
@@ -45,28 +45,27 @@ const AdminLogin = () => {
                 Password
               </label>
               <div className="flex justify-end items-center">
-      <input 
-        className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-        id="password"
-        type={inputType}
-      />
-      {
-        showPassword ?  <Eye
-      size={20}
-        type="button"
-        onClick={togglePasswordVisibility}
-        className="mt-1 text-sm text-gray-600 hover:text-gray-800 focus:outline-none absolute mr-2 cursor-pointer"
-      >
-      </Eye>:<EyeOff 
-       size={20}
-        type="button"
-        onClick={togglePasswordVisibility}
-        className="mt-1 text-sm text-gray-600 hover:text-gray-800 focus:outline-none absolute mr-2 cursor-pointer">
-      </EyeOff>
-      }
-     
-      
-    </div>
+                <input
+                  className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                  id="password"
+                  type={inputType}
+                />
+                {showPassword ? (
+                  <Eye
+                    size={20}
+                    type="button"
+                    onClick={togglePasswordVisibility}
+                    className="mt-1 text-sm text-gray-600 hover:text-gray-800 focus:outline-none absolute mr-2 cursor-pointer"
+                  ></Eye>
+                ) : (
+                  <EyeOff
+                    size={20}
+                    type="button"
+                    onClick={togglePasswordVisibility}
+                    className="mt-1 text-sm text-gray-600 hover:text-gray-800 focus:outline-none absolute mr-2 cursor-pointer"
+                  ></EyeOff>
+                )}
+              </div>
             </div>
           </div>
           <div class="flex items-center p-6 pt-0">
