@@ -69,7 +69,7 @@ const page = () => {
                     <Input
                       id="email"
                       defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                      className="focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
                   <div className="flex flex-col items-right gap-1">
@@ -77,7 +77,7 @@ const page = () => {
                     <Input
                       id="firstName"
                       defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                      className="focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
                   <div className="flex flex-col items-right gap-1 ">
@@ -85,10 +85,10 @@ const page = () => {
                     <Input
                       id="firstName"
                       defaultValue=""
-                      className="col-span-2 h-9 focus-visible:outline-none focus-visible:ring-0"
+                      className="focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
-                  <div className="flex gap-10">
+                  <div className="flex flex-col md:flex-row gap-4 md:gap-10">
                   <div className="flex flex-col items-right gap-1">
                     <Label htmlFor="maxHeight">Start Date</Label>
                     <DatePicker />

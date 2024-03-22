@@ -79,7 +79,7 @@ const page = () => {
               <div className="mt-3">
                 <Label>Desktop Banner</Label>
               </div>
-              <div className="flex gap-10">
+              <div className="flex gap-2.5 lg:gap-5">
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
@@ -88,7 +88,7 @@ const page = () => {
                   </button>
                   <input  type="file" id="fileInput" className="hidden" />
                 </div>
-                <Input className='focus-visible:ring-0 w-[86%]' type='text' placeholder='Or paste a link here'></Input>
+                <Input className='focus-visible:ring-0 w-[69%] lg:w-[78%] 2xl:w-[88%]' type='text' placeholder='Or paste a link here'></Input>
               </div>
               
             </div>   
@@ -96,7 +96,7 @@ const page = () => {
               <div className="mt-3">
                 <Label>Mobile Banner</Label>
               </div>
-              <div className="flex gap-10">
+              <div className="flex gap-2.5 lg:gap-5">
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
@@ -105,7 +105,7 @@ const page = () => {
                   </button>
                   <input  type="file" id="fileInput" className="hidden" />
                 </div>
-                <Input className='focus-visible:ring-0 w-[86%]' type='text' placeholder='Or paste a link here'></Input>
+                <Input className='focus-visible:ring-0 w-[69%] lg:w-[78%] 2xl:w-[88%]' type='text' placeholder='Or paste a link here'></Input>
               </div>
               
             </div>           

@@ -35,6 +35,7 @@ import { Separator } from "../../../components/ui/separator";
 import { Switch } from "../../../components/ui/switch";
 import Link from "next/link";
 import DatePicker from "../../../components/DatePicker";
+import { cn } from "../../../lib/utils";
 
 const page = () => {
   return (

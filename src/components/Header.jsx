@@ -52,12 +52,12 @@ const Header = () => {
           <div className="flex items-center justify-between space-x-2 md:justify-end">
             <TypographySmall />
             <div className="">
-              <Sheet >
+              <Sheet>
                 <SheetTrigger asChild>
-                  <AlignLeft className='block md:hidden'/>
+                  <AlignLeft className='block md:hidden cursor-pointer'/>
                 </SheetTrigger>
-                <SheetContent className='w-[230px]'>
-                <ScrollArea className='h-full'>
+                <SheetContent className='w-[215px]'>
+                <ScrollArea className='h-full w-[210px]'>
                   <SideNav />
                 </ScrollArea>
                 </SheetContent>

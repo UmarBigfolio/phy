@@ -29,24 +29,7 @@ import Page from "../../components/ui/page";
 
 const PageHeader = () => {
   return (
-    <Page >
-      <div className="flex items-center justify-between space-y-2 py-7">
-      <span>
-        <h2 className="text-[1.875rem] font-bold">Page Header</h2>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
-      </span>
-        <div class="flex items-center space-x-2">
-          <div class="grid gap-2">
-          </div>
-          <Dialog>
-            <DialogTrigger asChild>
-            <Link href='/page_header/create'>
-              <Button variant="">Add Header</Button>
-              </Link>
-            </DialogTrigger>
-          </Dialog>
-        </div>
-      </div>
+    <Page title="Page Header" subTitle="Deploy your new project in one-click" href="/page_header/create" btnContent="Add Header">
       <PageHeaderTable />
     </Page>
   );

@@ -60,7 +60,7 @@ const page = () => {
               <div className="mt-3">
                 <Label>Image</Label>
               </div>
-              <div className="flex gap-10">
+              <div className="flex gap-2.5 lg:gap-5">
                 <div className="file-upload mt-[1px]">
                   <button>
                     <label htmlFor="fileInput" className="file-upload-button">
@@ -69,7 +69,11 @@ const page = () => {
                   </button>
                   <input  type="file" id="fileInput" className="hidden" />
                 </div>
-                <Input className='focus-visible:ring-0 w-[86%]' type='text' placeholder='Or paste a link here'></Input>
+                <Input
+                      type="text"
+                      placeholder="Or paste a link here"
+                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
+                    ></Input>
               </div>
             </div>
             <div className="grid w-full items-center gap-4 mt-3">

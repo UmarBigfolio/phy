@@ -57,14 +57,7 @@ export default function Home() {
 
   return (
     <>
-      <Page>
-        <div className="flex items-center justify-between space-y-2 py-7">
-        <span>
-          <h2 className="text-[1.875rem] font-bold">Dashboard</h2>
-          <CardDescription>Deploy your new project in one-click.</CardDescription>
-        </span>
-      </div>
-
+      <Page title="Dashboard" subTitle="Deploy your new project in one-click.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mx-auto md:px-0">
           {data.map((item) => {
             return (
