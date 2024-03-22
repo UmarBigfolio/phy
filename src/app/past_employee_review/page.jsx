@@ -27,8 +27,8 @@ import {
 
 const PastEmployeeReview = () => {
   return (
-    <div className="pr-2">
-      <div class="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
+    <div >
+      <div className="flex items-center justify-between space-y-2 py-7">
       <span>
         <h2 className="text-[1.875rem] font-bold">Past Employee Reviews</h2>
         <CardDescription>Deploy your new project in one-click.</CardDescription>

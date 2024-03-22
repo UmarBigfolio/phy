@@ -129,8 +129,8 @@ const FileManagerTable = () => {
     },
   });
   return (
-    <div className="pr-2">
-      <div className="w-full pl-2 2xl:pl-5">
+    <div >
+      <div className="w-full">
         <Label htmlFor="file" className="ml-5 cursor-pointer">
           <div className="flex flex-col justify-center gap-2 items-center border border-dashed py-10 rounded-lg hover:border-black">
             <FolderUp size={40} />
@@ -143,7 +143,7 @@ const FileManagerTable = () => {
           </div>
         </Label>
         <div className="flex items-center py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between w-[100%] gap-5">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5">
             <div>
               <Input
                 placeholder="Search"
@@ -159,34 +159,6 @@ const FileManagerTable = () => {
            <FolderUp />
             <Input id="file" type="file" className=" w-[240px] lg:w-[660px] md:ml-2 hidden" />
             </div> */}
-            <div>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="ml-auto">
-                    Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  {table
-                    .getAllColumns()
-                    .filter((column) => column.getCanHide())
-                    .map((column) => {
-                      return (
-                        <DropdownMenuCheckboxItem
-                          key={column.id}
-                          className="capitalize"
-                          checked={column.getIsVisible()}
-                          onCheckedChange={(value) =>
-                            column.toggleVisibility(!!value)
-                          }
-                        >
-                          {column.id}
-                        </DropdownMenuCheckboxItem>
-                      );
-                    })}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
           </div>
         </div>
         <div className="rounded-md border">

@@ -1,13 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { ScrollArea, ScrollBar } from "../components/ui/scroll-area";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../components/ui/select";
+import React, { useState } from "react";
 
 import Link from "next/link";
 import {
@@ -23,8 +15,12 @@ import {
   TabletSmartphone,
   User,
 } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { cn } from "../lib/utils";
 const SideNav = () => {
   const [activeLink, setActiveLink] = useState(null);
+
+  const path = usePathname();
 
   const handleLinkClick = (index) => {
     setActiveLink(index);
@@ -367,27 +363,30 @@ const SideNav = () => {
   ];
 
   return (
-      <div className=" md:mt-6  md:border-r-[1px] mb-5 h-[100%]">
-        <div className="w-14 md:w-[200px] lg:w-[230px] pt-2 md:pt-16">
-          <nav className="grid gap-1 px-2">
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                className={`inline-flex items-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 justify-start ${
-                  activeLink === index
-                    ? "bg-black text-white"
-                    : "hover:bg-accent hover:text-accent-foreground"
-                }`}
-                href={link?.href || ""}
-                onClick={() => handleLinkClick(index)}
-              >
-                {link.icon}
-                <span>{link.text}</span>
-              </Link>
-            ))}
-          </nav>
-        </div>
+    <div className=" md:mt-6  md:border-r-[1px] mb-5 h-[100%]">
+      <div className="w-14 md:w-[200px] lg:w-[230px] pt-2 md:pt-16">
+        <nav className="grid gap-1 px-2">
+          {links.map((link, index) => (
+            <Link
+              className={cn(
+                "inline-flex items-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 justify-start",
+                {
+                  "bg-black text-white": path === link.href,
+                  "hover:bg-accent hover:text-accent-foreground":
+                    path !== link.href,
+                }
+              )}
+              key={index}
+              href={link?.href || ""}
+              onClick={() => handleLinkClick(index)}
+            >
+              {link.icon}
+              <span>{link.text}</span>
+            </Link>
+          ))}
+        </nav>
       </div>
+    </div>
   );
 };
 

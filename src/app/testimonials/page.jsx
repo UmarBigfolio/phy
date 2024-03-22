@@ -24,11 +24,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../../components/ui/dialog";
+import Page from "../../components/ui/page";
 
 const Book = () => {
   return (
-    <div className="pr-2">
-      <div class="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
+    <Page >
+      <div className="flex items-center justify-between space-y-2 py-7">
       <span>
         <h2 className="text-[1.875rem] font-bold">Testimonials</h2>
         <CardDescription>Deploy your new project in one-click.</CardDescription>
@@ -87,7 +88,7 @@ const Book = () => {
         </div>
       </div>
       <TestimonialsTable />
-    </div>
+    </Page>
   );
 };
 

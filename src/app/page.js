@@ -1,7 +1,8 @@
 import Viz from "../components/Viz";
 import RecentTable from "../components/RecentTable";
 import { AppleIcon, CircleUserIcon, Component, Package, Rss, Star, UserPlus, UserX, VideoIcon } from "lucide-react";
-import {CardDescription} from "../components/ui/card"
+import {Card, CardDescription} from "../components/ui/card"
+import Page from "../components/ui/page";
 export default function Home() {
   const data = [
     {
@@ -56,18 +57,19 @@ export default function Home() {
 
   return (
     <>
-      <div className="md:p-6 md:mt-1">
-        <div className="pt-6 md:pt-0 pb-6 pl-6 md:pl-0">
-          <h1 className="text-[1.875rem] font-bold">Dashboard</h1>
+      <Page>
+        <div className="flex items-center justify-between space-y-2 py-7">
+        <span>
+          <h2 className="text-[1.875rem] font-bold">Dashboard</h2>
           <CardDescription>Deploy your new project in one-click.</CardDescription>
+        </span>
+      </div>
 
-        </div>
-
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mx-auto px-4 md:px-0">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mx-auto md:px-0">
           {data.map((item) => {
             return (
               <>
-                <div className="rounded-xl border bg-card text-card-foreground shadow">
+                 <Card className="rounded-xl border bg-card text-card-foreground shadow">
                   <div className="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
                     <h3 className="tracking-tight text-sm font-medium">
                       {item.title}
@@ -88,15 +90,16 @@ export default function Home() {
                     <div className="text-2xl font-bold">{item.numbers}</div>
                     <p className="text-xs text-muted-foreground">{item.subTitle}</p>
                   </div>
-                </div>
+                </Card> 
               </>
             );
           })}
         </div>
-      </div>
-      <div className="px-4 2xl:px-6 mt-4 md:mt-0">
+        <div className="pt-4">
         <RecentTable />
       </div>
+      </Page>
+     
     </>
   );
 }

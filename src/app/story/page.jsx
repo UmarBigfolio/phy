@@ -16,11 +16,12 @@ import {
   DialogTrigger,
 } from "../../components/ui/dialog";
 import Link from "next/link";
+import Page from "../../components/ui/page";
 
 const Story = () => {
   return (
-    <div className="pr-2">
-      <div class="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
+    <Page >
+      <div className="flex items-center justify-between space-y-2 py-7">
       <span>
         <h2 className="text-[1.875rem] font-bold">Our Story</h2>
         <CardDescription>Deploy your new project in one-click.</CardDescription>
@@ -38,7 +39,7 @@ const Story = () => {
         </div>
       </div>
       <OurStoryTable />
-    </div>
+    </Page>
   );
 };
 

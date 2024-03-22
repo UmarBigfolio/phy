@@ -2,7 +2,7 @@ import React from "react";
 
 const RecentTable = () => {
   return (
-    <div className="lg:mb-16">
+    <div className="mb-6 lg:mb-16">
       <div className="rounded-xl border bg-card text-card-foreground shadow col-span-3 pt-[5px]">
         <div className="flex flex-col space-y-1.5 p-6">
           <h3 className="font-semibold leading-none tracking-tight">

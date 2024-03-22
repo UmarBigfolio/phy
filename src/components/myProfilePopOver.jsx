@@ -12,7 +12,7 @@ export function PopoverDemo() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-      <div className="flex justify-center items-center gap-2 pr-3 cursor-pointer">
+      <div className="flex justify-center items-center gap-2 cursor-pointer">
           <svg
             viewBox="64 64 896 896"
             focusable="false"
@@ -29,7 +29,7 @@ export function PopoverDemo() {
           </small>
         </div>
       </PopoverTrigger>
-      <PopoverContent className="w-[225px] mt-2 mr-5">
+      <PopoverContent className="w-[225px] mt-2 mr-10 md:mr-5">
         <div>
   <div className="px-2 py-1.5 text-sm font-normal">
     <div className="flex flex-col space-y-1">
@@ -48,7 +48,7 @@ export function PopoverDemo() {
   <Link href='/profile'>
     <div
       role="menuitem"
-      className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
       tabIndex="-1"
       data-orientation="vertical"
       data-radix-collection-item=""
@@ -61,7 +61,7 @@ export function PopoverDemo() {
     </Link>
     <div
       role="menuitem"
-      className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
       tabIndex="-1"
       data-orientation="vertical"
       data-radix-collection-item=""
@@ -77,7 +77,7 @@ export function PopoverDemo() {
   ></div>
   <div
     role="menuitem"
-    className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+    className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
     tabIndex="-1"
     data-orientation="vertical"
     data-radix-collection-item=""

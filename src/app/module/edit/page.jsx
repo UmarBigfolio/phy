@@ -8,33 +8,45 @@ import {
   CardHeader,
   CardTitle,
 } from "../../../components/ui/card";
-
+import Page from "../../../components/ui/page"
 import { Input } from "../../../components/ui/input";
 import { Label } from "../../../components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "../../../components/ui/select";
-import { ArrowUpToLine, Car, ChevronDown, Upload } from "lucide-react";
+import { ArrowUpToLine, Car, ChevronDown, FileSliders, Upload } from "lucide-react";
 import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="flex mt-20">
-      <div className="w-[25%]">
-        <div className="flex items-center justify-between space-y-2 py-7 pl-2 2xl:pl-6">
-          <h2 className="text-[1.875rem] font-bold">Update Module</h2>
-        </div>
-      </div>
-      <div className="w-[70%]">
-        <Card>
-          <CardHeader>
-            <CardTitle>Update project</CardTitle>
-          </CardHeader>
-          <CardContent>
+    <>
+      <div className="bg-[#eaeaea59] h-[80%] relative top-60"> </div>
+      <div className="relative top-[-80%]">
+      <Page>
+        <h2 className="text-[1.875rem] font-bold pt-7">
+          Update Module
+        </h2>
+        <div className="flex flex-col lg:flex-row mt-7 lg:gap-8 ">
+          <div className=" w-full lg:w-[25%]">
+            <div className="flex items-center justify-between space-y-2 pb-7">
+              <Card className="bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2">
+                <FileSliders size={18} />
+                <h2 className="font-bold text-lg">Module</h2>
+              </Card>
+            </div>
+          </div>
+          <div className="w-full lg:w-[75%]">
+            <Card>
+              <CardHeader>
+                <CardTitle>Create project</CardTitle>
+              </CardHeader>
+              <SelectSeparator className="w-[85%] 2xl:w-[95%] mx-auto" />
+              <CardContent className='pt-5'>
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
@@ -188,15 +200,18 @@ const page = () => {
               </div>
             </form>
           </CardContent>
-          <CardFooter className="flex justify-between">
-          <Link href='/module'>
-            <Button variant="outline">Cancel</Button>
-          </Link>
-            <Button>Update</Button>
-          </CardFooter>
-        </Card>
+              <CardFooter className="flex justify-between">
+                <Link href="/module">
+                  <Button variant="outline">Cancel</Button>
+                </Link>
+                <Button>Update</Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+        </Page>
       </div>
-    </div>
+    </>
   );
 };
 

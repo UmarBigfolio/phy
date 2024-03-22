@@ -56,7 +56,7 @@ const Header = () => {
                 <SheetTrigger asChild>
                   <AlignLeft className='block md:hidden'/>
                 </SheetTrigger>
-                <SheetContent className='w-[200px]'>
+                <SheetContent className='w-[230px]'>
                 <ScrollArea className='h-full'>
                   <SideNav />
                 </ScrollArea>
