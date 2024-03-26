@@ -32,7 +32,7 @@ const page = () => {
             <div className="flex items-center justify-between space-y-2 pb-7">
               <Card className="bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2">
                 <FileSliders size={18} />
-                <h2 className="font-bold text-lg">Create Home Page Review</h2>
+                <h2 className="font-bold text-lg">Home Page Review</h2>
               </Card>
             </div>
           </div>

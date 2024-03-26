@@ -7,12 +7,16 @@ import {
   BookOpen,
   BookmarkCheck,
   CircleFadingPlus,
+  FileAxis3D,
+  FileBox,
   FileSliders,
+  FileVideo2,
   Landmark,
   Layers,
   NotebookText,
   StarHalf,
   TabletSmartphone,
+  TextSelect,
   User,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -70,7 +74,7 @@ const SideNav = () => {
       text: "Courses",
       href: "/courses",
       icon: (
-        <User
+        <TextSelect
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -87,7 +91,7 @@ const SideNav = () => {
       text: "Modules",
       href: "/module",
       icon: (
-        <BookmarkCheck
+        <FileBox
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -105,7 +109,7 @@ const SideNav = () => {
       text: "Submodules",
       href: "/submodules",
       icon: (
-        <BookmarkCheck
+        <FileAxis3D
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -123,7 +127,7 @@ const SideNav = () => {
       text: "Videos",
       href: "/Video",
       icon: (
-        <BookmarkCheck
+        <FileVideo2
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"

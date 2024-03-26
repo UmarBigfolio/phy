@@ -61,7 +61,7 @@ const Page = () => {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
-      <div className="w-[70%]">
+      <div className="w-[70% flex justify-center">
         <div>
           <span className="flex flex-col gap-4">
             <h2 className="text-[1.875rem] font-bold">Bigfolio Admin</h2>
