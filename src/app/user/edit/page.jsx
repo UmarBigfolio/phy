@@ -119,7 +119,7 @@ const page = () => {
                         </SelectContent>
                       </Select>
                     </div>
-                    <div className="flex gap-10">
+                    <div className="flex flex-col md:flex-row gap-3 md:gap-10">
                       <div className="flex flex-col items-right gap-1 ">
                         <Label htmlFor="maxHeight">Start Date</Label>
                         <DatePicker />

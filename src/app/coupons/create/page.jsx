@@ -35,25 +35,27 @@ import { Separator } from "../../../components/ui/separator";
 import { Switch } from "../../../components/ui/switch";
 import Link from "next/link";
 import DatePicker from "../../../components/DatePicker";
+import Page from "../../../components/ui/page";
 
 const page = () => {
   return (
     <>
       <div className="bg-[#eaeaea59] h-[60%] relative top-60"> </div>
       <div className="relative top-[-60%]">
-        <h2 className="text-[1.875rem] font-bold  pl-2 2xl:pl-7 pt-7">
+      <Page>
+        <h2 className="text-[1.875rem] font-bold pt-7">
           Create Coupons
         </h2>
         <div className="flex flex-col lg:flex-row mt-7 lg:gap-8 ">
           <div className=" w-full lg:w-[25%]">
-            <div className="flex items-center justify-between space-y-2 pb-7 px-2 2xl:pl-6">
+            <div className="flex items-center justify-between space-y-2 pb-7">
               <Card className="bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2">
                 <FileSliders size={18} />
                 <h2 className="font-bold text-lg">Coupon Codes</h2>
               </Card>
             </div>
           </div>
-          <div className="w-full lg:w-[70%] px-2">
+          <div className="w-full lg:w-[75%]">
             <Card>
               <CardHeader>
                 <CardTitle>Create project</CardTitle>
@@ -88,7 +90,7 @@ const page = () => {
                       className="focus-visible:outline-none focus-visible:ring-0"
                     />
                   </div>
-                  <div className="flex flex-col md:flex-row gap-4 md:gap-10">
+                  <div className="flex flex-col md:flex-row gap-4">
                   <div className="flex flex-col items-right gap-1">
                     <Label htmlFor="maxHeight">Start Date</Label>
                     <DatePicker />
@@ -132,6 +134,7 @@ const page = () => {
             </Card>
           </div>
         </div>
+        </Page>
       </div>
     </>
   );

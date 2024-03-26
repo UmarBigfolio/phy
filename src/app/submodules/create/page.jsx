@@ -35,25 +35,27 @@ import {
 } from "lucide-react";
 import { Separator } from "../../../components/ui/separator";
 import { Switch } from "../../../components/ui/switch";
+import Page from "../../../components/ui/page";
 
 const page = () => {
   return (
     <>
       <div className="bg-[#eaeaea59] h-[80%] relative top-60"> </div>
       <div className="relative top-[-80%]">
-        <h2 className="text-[1.875rem] font-bold  pl-2 2xl:pl-7 pt-7">
+      <Page>
+        <h2 className="text-[1.875rem] font-bold pt-7">
           Create a Submodule
         </h2>
         <div className="flex flex-col lg:flex-row mt-7 lg:gap-8 ">
           <div className=" w-full lg:w-[25%]">
-            <div className="flex items-center justify-between space-y-2 pb-7 px-2 2xl:pl-6">
+            <div className="flex items-center justify-between space-y-2 pb-7">
               <Card className="bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2">
                 <FileSliders size={18} />
                 <h2 className="font-bold text-lg">SUBMODULE</h2>
               </Card>
             </div>
           </div>
-          <div className="w-full lg:w-[70%] px-2">
+          <div className="w-full lg:w-[75%]">
             <Card>
               <CardHeader>
                 <CardTitle>Create project</CardTitle>
@@ -72,22 +74,20 @@ const page = () => {
                   <div className="mt-3">
                     <Label>Icon</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
+                 <div className="flex gap-2.5 lg:gap-5">
                     <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
+                    <div className="file-upload-button">
+                    <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" >
+                  <Upload size={15} />
+                       Upload
+                    </label>
+                  </div>
                       <input type="file" id="fileInput" className="hidden" />
                     </div>
                     <Input
                       type="text"
                       placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
+                      className=""
                     ></Input>
                   </div>
                 </div>
@@ -95,22 +95,20 @@ const page = () => {
                   <div className="mt-3">
                     <Label>Flash Card</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
+                 <div className="flex gap-2.5 lg:gap-5">
                     <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
+                    <div className="file-upload-button">
+                    <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" >
+                  <Upload size={15} />
+                       Upload
+                    </label>
+                  </div>
                       <input type="file" id="fileInput" className="hidden" />
                     </div>
                     <Input
                       type="text"
                       placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
+                      className=""
                     ></Input>
                   </div>
                 </div>
@@ -160,6 +158,7 @@ const page = () => {
             </Card>
           </div>
         </div>
+        </Page>
       </div>
     </>
   );

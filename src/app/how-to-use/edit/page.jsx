@@ -77,7 +77,7 @@ const page = () => {
             <div className="flex items-center justify-between space-y-2 pb-7">
               <Card className="bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2">
                 <FileSliders size={18} />
-                <h2 className="font-bold text-lg">How to Use</h2>
+                <h2 className="font-bold text-lg">Update</h2>
               </Card>
             </div>
           </div>
@@ -286,7 +286,7 @@ const page = () => {
                 <Link href="/how-to-use">
                   <Button variant="outline">Cancel</Button>
                 </Link>
-                <Button>Submit</Button>
+                <Button>Update</Button>
               </CardFooter>
             </Card>
           </div>

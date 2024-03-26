@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../../../components/ui/button";
+import Page from "../../../components/ui/page"
 import {
   Card,
   CardContent,
@@ -40,12 +41,13 @@ const page = () => {
     <>
       <div className="bg-[#eaeaea59] h-[60%] relative top-60"> </div>
       <div className="relative top-[-60%]">
-        <h2 className="text-[1.875rem] font-bold  pl-2 2xl:pl-7 pt-7">
+      <Page>
+        <h2 className="text-[1.875rem] font-bold pt-7">
           Update Badge
         </h2>
         <div className="flex flex-col lg:flex-row mt-7 lg:gap-8 ">
           <div className=" w-full lg:w-[25%]">
-            <div className="flex items-center justify-between space-y-2 pb-7 px-2 2xl:pl-6">
+            <div className="flex items-center justify-between space-y-2 pb-7">
               <Card className="bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2">
                 <FileSliders size={18} />
                 <h2 className="font-bold text-lg">Badge</h2>
@@ -59,7 +61,7 @@ const page = () => {
         <h2 className="text-xs font-medium  pl-2 2xl:pl-7 ">Create a course</h2>  
         </div> */}
           </div>
-          <div className="w-full lg:w-[70%] px-2">
+          <div className="w-full lg:w-[75%]">
             <Card>
               <CardHeader>
                 <CardTitle>Create project</CardTitle>
@@ -112,6 +114,7 @@ const page = () => {
             </Card>
           </div>
         </div>
+        </Page>
       </div>
     </>
   );

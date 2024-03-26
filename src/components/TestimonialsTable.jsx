@@ -36,7 +36,7 @@ const data = [
     image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     visible:"show",
     total_reviews:10,
-    link:'/student_review',
+    link:'/testimonials/student-review',
   },
   {
     id: "m5gr84i9",
@@ -45,7 +45,7 @@ const data = [
     image: "https://yt3.googleusercontent.com/PmWvIpianhgx5AmkCkFgY3mKLkbWybJTsJUZZ6ef0BYUhns62oF-7-BQCaDB9lHHyf_D7UsZWjk=s900-c-k-c0x00ffffff-no-rj",
     visible:'show',
     total_reviews:2,
-    link:'/past_employee_review',
+    link:'/testimonials/past-employee-reviews',
   },
   
 ];

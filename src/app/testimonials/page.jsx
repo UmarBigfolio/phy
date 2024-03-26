@@ -5,7 +5,7 @@ import Page from "../../components/ui/page";
 
 const Book = () => {
   return (
-    <Page title="Testimonials" subTitle="Deploy your new project in one-click." href="" btnContent="Create Section">
+    <Page title="Testimonials" subTitle="Deploy your new project in one-click." href="testimonials/create" btnContent="Create Section" >
       <TestimonialsTable />
     </Page>
   );

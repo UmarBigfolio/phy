@@ -1,13 +1,8 @@
 'use client'
 import React, { useState } from "react";
-import { PopoverDemo } from "./myProfilePopOver";
+import { MyProfile } from "./myProfilePopOver";
 import { AlignLeft } from "lucide-react";
-import { Award, BookOpen, BookmarkCheck, CircleFadingPlus, FileSliders, Landmark, Layers, NotebookText, StarHalf, TabletSmartphone, User } from "lucide-react";
-import Link from "next/link";
 
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { Label } from "./ui/label"
 import {
   Sheet,
   SheetClose,
@@ -20,16 +15,6 @@ import {
 } from "./ui/sheet"
 import SideNav from "./Sidenav";
 import { ScrollArea } from "./ui/scroll-area";
-
-export function TypographySmall() {
-  return (
-    <>
-      <div className="flex justify-center items-center">
-        <PopoverDemo />
-      </div>
-    </>
-  );
-}
 
 const Header = () => {
 
@@ -48,9 +33,8 @@ const Header = () => {
               </span>
             </a>
           </div>
-
           <div className="flex items-center justify-between space-x-2 md:justify-end">
-            <TypographySmall />
+            <MyProfile />
             <div className="">
               <Sheet>
                 <SheetTrigger asChild>

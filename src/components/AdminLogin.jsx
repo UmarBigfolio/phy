@@ -12,7 +12,7 @@ const AdminLogin = () => {
     setInputType(showPassword ? "password" : "text");
   };
   return (
-    <div className="mt-40">
+    <div className="mt-36">
       <div className="flex items-center justify-center w-full">
         <div className="rounded-xl border bg-card text-card-foreground shadow">
           <div className="flex flex-col p-6 md:pr-20 lg:pr-32 2xl:pr-48 space-y-1">

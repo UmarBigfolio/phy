@@ -1,4 +1,5 @@
-
+'use client'
+import React, { useState } from 'react';
 import {
   Popover,
   PopoverContent,
@@ -8,11 +9,24 @@ import { Input } from "./ui/input"
 import { Button } from "./ui/button"
 import Link from "next/link"
 
-export function PopoverDemo() {
+export function MyProfile() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopover = () => {
+    setIsOpen(true);
+  };
+
+  const closePopover = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Popover>
-      <PopoverTrigger asChild>
-      <div className="flex justify-center items-center gap-2 cursor-pointer">
+      <PopoverTrigger asChild >
+        <div
+          className="flex justify-center items-center gap-2 cursor-pointer"
+          onClick={togglePopover}
+        >
           <svg
             viewBox="64 64 896 896"
             focusable="false"
@@ -29,65 +43,71 @@ export function PopoverDemo() {
           </small>
         </div>
       </PopoverTrigger>
-      <PopoverContent className="w-[225px] mt-2 mr-10 md:mr-5">
-        <div>
-  <div className="px-2 py-1.5 text-sm font-normal">
-    <div className="flex flex-col space-y-1">
-      <p className="text-sm font-medium leading-none">Bigfolio</p>
-      <p className="text-xs leading-none text-muted-foreground">
-        hello@Bigfolio.co
-      </p>
-    </div>
-  </div>
-  <div
-    role="separator"
-    aria-orientation="horizontal"
-    className="-mx-1 my-1 h-px bg-muted"
-  ></div>
-  <div role="group">
-  <Link href='/profile'>
-    <div
-      role="menuitem"
-      className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-      tabIndex="-1"
-      data-orientation="vertical"
-      data-radix-collection-item=""
-    >
-      Profile
-      <span className="ml-auto text-xs tracking-widest opacity-60">
-        ⇧⌘P
-      </span>
-    </div>
-    </Link>
-    <div
-      role="menuitem"
-      className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-      tabIndex="-1"
-      data-orientation="vertical"
-      data-radix-collection-item=""
-    >
-      Settings
-      <span className="ml-auto text-xs tracking-widest opacity-60">⌘S</span>
-    </div>
-  </div>
-  <div
-    role="separator"
-    aria-orientation="horizontal"
-    className="-mx-1 my-1 h-px bg-muted"
-  ></div>
-  <div
-    role="menuitem"
-    className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-    tabIndex="-1"
-    data-orientation="vertical"
-    data-radix-collection-item=""
-  >
-    Log out
-    <span className="ml-auto text-xs tracking-widest opacity-60">⇧⌘Q</span>
-  </div>
-</div>
-
-      </PopoverContent>
+      {isOpen && (
+        <PopoverContent className="w-[225px] mt-2 mr-10 md:mr-5" onClose={closePopover}>
+          <div>
+            <div className="px-2 py-1.5 text-sm font-normal">
+              <div className="flex flex-col space-y-1">
+                <p className="text-sm font-medium leading-none">Bigfolio</p>
+                <p className="text-xs leading-none text-muted-foreground">
+                  hello@Bigfolio.co
+                </p>
+              </div>
+            </div>
+            <div
+              role="separator"
+              aria-orientation="horizontal"
+              className="-mx-1 my-1 h-px bg-muted"
+            ></div>
+            <div role="group">
+              <Link href='/profile'>
+                <div
+                  onClick={closePopover}
+                  role="menuitem"
+                  className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                  tabIndex="-1"
+                  data-orientation="vertical"
+                  data-radix-collection-item=""
+                >
+                  Profile
+                  <span className="ml-auto text-xs tracking-widest opacity-60">
+                    ⇧⌘P
+                  </span>
+                </div>
+              </Link>
+              <div
+              onClick={closePopover}
+                role="menuitem"
+                className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                tabIndex="-1"
+                data-orientation="vertical"
+                data-radix-collection-item=""
+              >
+                Settings
+                <span className="ml-auto text-xs tracking-widest opacity-60">⌘S</span>
+              </div>
+            </div>
+            <div
+              role="separator"
+              aria-orientation="horizontal"
+              className="-mx-1 my-1 h-px bg-muted"
+            ></div>
+            <Link href='/'>
+              <div
+                onClick={closePopover}
+                role="menuitem"
+                className="cursor-pointer relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                tabIndex="-1"
+                data-orientation="vertical"
+                data-radix-collection-item=""
+              >
+                Log out
+                <span className="ml-auto text-xs tracking-widest opacity-60">⇧⌘Q</span>
+              </div>
+            </Link>
+          </div>
+        </PopoverContent>
+      )}
     </Popover>
   )
 }

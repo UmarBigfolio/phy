@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "../../../components/ui/button";
 import Link from "next/link";
+import Page from "../../../components/ui/page";
 import {
   Card,
   CardContent,
@@ -48,7 +49,7 @@ import { Textarea } from "../../../components/ui/textarea";
 import { Checkbox } from "../../../components/ui/checkbox";
 import { MinusCircle, PlusCircle } from "lucide-react";
 
-const Page = () => {
+const page = () => {
   const [inputs, setInputs] = useState([""]);
   const handleAddInput = () => {
     setInputs([...inputs, ""]);
@@ -70,12 +71,13 @@ const Page = () => {
     <>
       <div className="bg-[#eaeaea59] h-[90%] relative top-60"> </div>
       <div className="relative top-[-90%]">
-        <h2 className="text-[1.875rem] font-bold  pl-2 2xl:pl-7 pt-7">
+      <Page>
+        <h2 className="text-[1.875rem] font-bold pt-7">
           Update Video
         </h2>
         <div className="flex flex-col lg:flex-row mt-7 lg:gap-8 ">
           <div className=" w-full lg:w-[25%]">
-            <div className="flex items-center justify-between space-y-2 pb-7 px-2 2xl:pl-6">
+            <div className="flex items-center justify-between space-y-2 pb-7">
               <Card className="bg-[#EAEAEA] py-6 pl-6 flex w-full items-center gap-2">
                 <FileSliders size={18} />
                 <h2 className="font-bold text-lg">Clinical / Preclinical</h2>
@@ -89,7 +91,7 @@ const Page = () => {
         <h2 className="text-xs font-medium  pl-2 2xl:pl-7 ">Create a course</h2>  
         </div> */}
           </div>
-          <div className="w-full lg:w-[70%] px-2">
+          <div className="w-full lg:w-[75%]">
             <Card>
               <CardHeader>
                 <CardTitle>Create project</CardTitle>
@@ -108,162 +110,43 @@ const Page = () => {
                   <div className="mt-3">
                     <Label>Icon</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
-                    <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
-                      <input type="file" id="fileInput" className="hidden" />
-                    </div>
-                    <Input
-                      type="text"
-                      placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
-                    ></Input>
-                  </div>
+                  <div className="flex gap-2.5 lg:gap-5"> <div className="file-upload mt-[1px]"> <div className="file-upload-button"> <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" > <Upload size={15} /> Upload </label> </div> <input type="file" id="fileInput" className="hidden" /> </div> <Input type="text" placeholder="Or paste a link here" className="" ></Input> </div>
                 </div>
                 <div>
                   <div className="mt-3">
                     <Label>Video</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
-                    <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
-                      <input type="file" id="fileInput" className="hidden" />
-                    </div>
-                    <Input
-                      type="text"
-                      placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
-                    ></Input>
-                  </div>
+                  <div className="flex gap-2.5 lg:gap-5"> <div className="file-upload mt-[1px]"> <div className="file-upload-button"> <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" > <Upload size={15} /> Upload </label> </div> <input type="file" id="fileInput" className="hidden" /> </div> <Input type="text" placeholder="Or paste a link here" className="" ></Input> </div>
                 </div>
                 <div>
                   <div className="mt-3">
                     <Label>VTT File</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
-                    <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
-                      <input type="file" id="fileInput" className="hidden" />
-                    </div>
-                    <Input
-                      type="text"
-                      placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
-                    ></Input>
-                  </div>
+                  <div className="flex gap-2.5 lg:gap-5"> <div className="file-upload mt-[1px]"> <div className="file-upload-button"> <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" > <Upload size={15} /> Upload </label> </div> <input type="file" id="fileInput" className="hidden" /> </div> <Input type="text" placeholder="Or paste a link here" className="" ></Input> </div>
                 </div>
                 <div>
                   <div className="mt-3">
                     <Label>PDF </Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
-                    <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
-                      <input type="file" id="fileInput" className="hidden" />
-                    </div>
-                    <Input
-                      type="text"
-                      placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
-                    ></Input>
-                  </div>
+                  <div className="flex gap-2.5 lg:gap-5"> <div className="file-upload mt-[1px]"> <div className="file-upload-button"> <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" > <Upload size={15} /> Upload </label> </div> <input type="file" id="fileInput" className="hidden" /> </div> <Input type="text" placeholder="Or paste a link here" className="" ></Input> </div>
                 </div>
                 <div>
                   <div className="mt-3">
                     <Label>Audio</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
-                    <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
-                      <input type="file" id="fileInput" className="hidden" />
-                    </div>
-                    <Input
-                      type="text"
-                      placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
-                    ></Input>
-                  </div>
+                  <div className="flex gap-2.5 lg:gap-5"> <div className="file-upload mt-[1px]"> <div className="file-upload-button"> <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" > <Upload size={15} /> Upload </label> </div> <input type="file" id="fileInput" className="hidden" /> </div> <Input type="text" placeholder="Or paste a link here" className="" ></Input> </div>
                 </div>
                 <div>
                   <div className="mt-3">
                     <Label>MNEMONICS Desktop</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
-                    <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
-                      <input type="file" id="fileInput" className="hidden" />
-                    </div>
-                    <Input
-                      type="text"
-                      placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
-                    ></Input>
-                  </div>
+                  <div className="flex gap-2.5 lg:gap-5"> <div className="file-upload mt-[1px]"> <div className="file-upload-button"> <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" > <Upload size={15} /> Upload </label> </div> <input type="file" id="fileInput" className="hidden" /> </div> <Input type="text" placeholder="Or paste a link here" className="" ></Input> </div>
                 </div>
                 <div>
                   <div className="mt-3">
                     <Label>MNEMONICS Mobile</Label>
                   </div>
-                  <div className="flex gap-2.5 lg:gap-5">
-                    <div className="file-upload mt-[1px]">
-                      <button>
-                        <label
-                          htmlFor="fileInput"
-                          className="file-upload-button"
-                        >
-                          <Upload size={14} /> <span className="">Upload</span>
-                        </label>
-                      </button>
-                      <input type="file" id="fileInput" className="hidden" />
-                    </div>
-                    <Input
-                      type="text"
-                      placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
-                    ></Input>
-                  </div>
+                  <div className="flex gap-2.5 lg:gap-5"> <div className="file-upload mt-[1px]"> <div className="file-upload-button"> <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" > <Upload size={15} /> Upload </label> </div> <input type="file" id="fileInput" className="hidden" /> </div> <Input type="text" placeholder="Or paste a link here" className="" ></Input> </div>
                 </div>
                 <div>
                   <div className="mt-3">
@@ -429,9 +312,10 @@ const Page = () => {
             </Card>
           </div>
         </div>
+        </Page>
       </div>
     </>
   );
 };
 
-export default Page;
+export default page;

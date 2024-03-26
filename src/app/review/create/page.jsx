@@ -12,7 +12,7 @@ import { Textarea } from "../../../components/ui/textarea"
 import { Input } from "../../../components/ui/input";
 import { Label } from "../../../components/ui/label";
 
-import { ArrowUpToLine, Bold, Car, ChevronDown, FileSliders, Italic, Underline } from "lucide-react";
+import { ArrowUpToLine, Bold, Car, ChevronDown, FileSliders, Italic, Underline, Upload } from "lucide-react";
 import Link from "next/link";
 import { ToggleGroup, ToggleGroupItem } from "../../../components/ui/toggle-group";
 import { Separator } from "../../../components/ui/separator";
@@ -61,20 +61,21 @@ const page = () => {
                 <Label>Image</Label>
               </div>
               <div className="flex gap-2.5 lg:gap-5">
-                <div className="file-upload mt-[1px]">
-                  <button>
-                    <label htmlFor="fileInput" className="file-upload-button">
-                      <ArrowUpToLine size={15} /> Upload
+                    <div className="file-upload mt-[1px]">
+                    <div className="file-upload-button">
+                    <label htmlFor="fileInput" className="flex justify-center gap-1 items-center px-4" >
+                  <Upload size={15} />
+                       Upload
                     </label>
-                  </button>
-                  <input  type="file" id="fileInput" className="hidden" />
-                </div>
-                <Input
+                  </div>
+                      <input type="file" id="fileInput" className="hidden" />
+                    </div>
+                    <Input
                       type="text"
                       placeholder="Or paste a link here"
-                      className="w-[69%] lg:w-[78%] 2xl:w-[88%]"
+                      className=""
                     ></Input>
-              </div>
+                  </div>
             </div>
             <div className="grid w-full items-center gap-4 mt-3">
                 <div className="flex flex-col space-y-1.5">
