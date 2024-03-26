@@ -45,7 +45,7 @@ import Page from "../../../components/ui/page";
 import { ToggleGroup, ToggleGroupItem } from "../../../components/ui/toggle-group";
 import { Textarea } from "../../../components/ui/textarea";
 
-const page = () => {
+const PAGE = () => {
   const [inputs, setInputs] = useState([""]);
 
   const handleAddInput = () => {
@@ -297,4 +297,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PAGE;
